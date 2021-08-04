@@ -10,10 +10,6 @@ body{
     background-color:#417295;;
 }
 
-.hide {
-    display: none;
-}
-
 /*Header styles*/
 header {
     display: flex;
@@ -125,5 +121,13 @@ header > h1 {
 footer > p {
     color: #C3E0E5;
     text-align: center;
+}
+
+#game-container.hide {
+    display: none;
+}
+
+#score-container.hide {
+    display: none;
 }
 
