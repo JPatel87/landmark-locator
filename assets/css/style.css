@@ -27,3 +27,42 @@ header > h1 {
     color: #C3E0E5;
     font-size: 2.0rem;
 }
+
+/*Insrtuction-container styles*/
+#instruction-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #C3E0E5;
+    border-radius: 8px;
+    min-height: 300px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#instruction-container > h2 {
+    text-align: center;
+    color: #274472;
+    flex: 0.1;
+}
+
+#instruction-container > p {
+    text-align: center;
+    color: #274472;
+    flex: 0.1;
+}
+
+#play-btn, #play-again-btn {
+    flex: 0.1;
+    background-color: #274472;
+    border-radius: 8px;
+    color: #C3E0E5;
+    height: 30px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 70vw;
+}
