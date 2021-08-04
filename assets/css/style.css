@@ -29,7 +29,7 @@ header > h1 {
 }
 
 /*Instruction-container styles*/
-#instruction-container, #game-container {
+#instruction-container, #game-container, #score-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,3 +88,9 @@ header > h1 {
     width: 70vw;
     text-decoration: none;
 }
+
+/*Score-container styles*/
+#score-container {
+    min-height: 200px;
+}
+
