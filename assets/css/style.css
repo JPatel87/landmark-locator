@@ -1,0 +1,29 @@
+/*Global styles*/
+* {
+    margin: 1vw;
+    padding: 0;
+    border: none;
+    font-family: Bubblegum Sans, fantasy;
+}
+
+body{
+    background-color:#417295;;
+}
+
+/*Header styles*/
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 50px;
+}
+header > i {
+    color: #C3E0E5;
+    font-size: 2.0rem;
+}
+
+header > h1 {
+    text-align: center;
+    color: #C3E0E5;
+    font-size: 2.0rem;
+}
