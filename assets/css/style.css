@@ -29,7 +29,10 @@ header > h1 {
 }
 
 /*Instruction-container styles*/
-#instruction-container, #game-container, #score-container, #option-choices {
+#instruction-container, 
+#game-container, 
+#score-container, 
+#choices {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -123,6 +126,7 @@ footer > p {
     text-align: center;
 }
 
+/*Hide class*/
 #game-container.hide {
     display: none;
 }
@@ -131,3 +135,6 @@ footer > p {
     display: none;
 }
 
+.hide {
+    display: none;
+}

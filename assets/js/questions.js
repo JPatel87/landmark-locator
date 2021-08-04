@@ -1,6 +1,6 @@
 let questions = [
     {
-        image: "assets/images/india.jpeg" alt="Taj Mahal, India"
+        image: "assets/images/india.jpeg",
         a: "India",
         b: "Cambodia",
         c: "Pakistan",
@@ -8,7 +8,7 @@ let questions = [
         answer: "option-a"
     },
     {
-        image: "assets/images/america.jpeg" alt="Statue of Liberty, America"
+        image: "assets/images/america.jpeg",
         a: "Colombia",
         b: "America",
         c: "Cuba",
@@ -16,7 +16,7 @@ let questions = [
         answer: "option-b"
     },
     {
-        image: "assets/images/austrailia.jpeg" alt="Twelve Apostles, Austrailia"
+        image: "assets/images/austrailia.jpeg",
         a: "Spain",
         b: "Austrailia",
         c: "Portugal",
@@ -24,7 +24,7 @@ let questions = [
         answer: "option-b"
     },
     {
-        image: "assets/images/bavaria.jpeg" alt="Neuschwanstein, Bavaria"
+        image: "assets/images/bavaria.jpeg",
         a: "Holland",
         b: "Belgium",
         c: "Bavaria",
@@ -32,7 +32,7 @@ let questions = [
         answer: "option-c"
     },
     {
-        image: "assets/images/brazil.jpeg" alt="Christ the Redeemer, Brazil"
+        image: "assets/images/brazil.jpeg",
         a: "Spain",
         b: "Brazil",
         c: "Portugal",
@@ -40,7 +40,7 @@ let questions = [
         answer: "option-b"
     },
     {
-        image: "assets/images/china.jpeg" alt="Great Wall of China, China"
+        image: "assets/images/china.jpeg",
         a: "China",
         b: "Japan",
         c: "Sri Lanka",
@@ -48,7 +48,7 @@ let questions = [
         answer: "option-a"
     },
     {
-        image: "assets/images/egypt.jpeg" alt="The Great Sphinx, Egypt"
+        image: "assets/images/egypt.jpeg",
         a: "Dubai",
         b: "Egypt",
         c: "Kenya",
@@ -56,7 +56,7 @@ let questions = [
         answer: "option-b"
     },
     {
-        image: "assets/images/england.jpeg" alt="Stonehenge, England"
+        image: "assets/images/england.jpeg",
         a: "Ireland",
         b: "Italy",
         c: "England",
@@ -64,7 +64,7 @@ let questions = [
         answer: "option-c"
     },
     {
-        image: "assets/images/france.jpeg" alt="Eiffel Tower, France"
+        image: "assets/images/france.jpeg",
         a: "Ireland",
         b: "France",
         c: "England",
@@ -72,7 +72,7 @@ let questions = [
         answer: "option-b"
     },
     {
-        image: "assets/images/germany.jpeg" alt="Berlin Cathedral, Germany"
+        image: "assets/images/germany.jpeg",
         a: "Germany",
         b: "Bulgaria",
         c: "Switzerland",
@@ -80,15 +80,15 @@ let questions = [
         answer: "option-a"
     },
     {
-        image: "assets/images/greece.jpeg" alt="Blue domed church, Greece"
+        image: "assets/images/greece.jpeg",
         a: "Croatia",
-        b: "Malta",
+        b: "Ma",
         c: "Bahamas",
         d: "Greece",
         answer: "option-d"
     },
     {
-        image: "assets/images/italy.jpeg" alt="Positano, Italy"
+        image: "assets/images/italy.jpeg",
         a: "Cyprus",
         b: "Costa Rica",
         c: "Brazil",
@@ -96,7 +96,7 @@ let questions = [
         answer: "option-d"
     },
     {
-        image: "assets/images/japan.jpeg" alt="Mount Fuji, Japan"
+        image: "assets/images/japan.jpeg",
         a: "China",
         b: "Philippenes",
         c: "Morroco",
@@ -104,7 +104,7 @@ let questions = [
         answer: "option-d"
     },
     {
-        image: "assets/images/malaysia.jpeg" alt="Petronas twin towers, Malaysia"
+        image: "assets/images/malaysia.jpeg",
         a: "Singapore",
         b: "Malaysia",
         c: "Kuwait",
@@ -112,7 +112,7 @@ let questions = [
         answer: "option-b"
     },
     {
-        image: "assets/images/mexico.jpeg" alt="Chichen Itza, Mexico"
+        image: "assets/images/mexico.jpeg",
         a: "Italy",
         b: "Kazakhstan",
         c: "Mexico",
@@ -120,7 +120,7 @@ let questions = [
         answer: "option-c"
     },
     {
-        image: "assets/images/peru.jpeg" alt="Machu Pichu, Peru"
+        image: "assets/images/peru.jpeg",
         a: "Indonesia",
         b: "Jordan",
         c: "Peru",
@@ -128,7 +128,7 @@ let questions = [
         answer: "option-c"
     },
     {
-        image: "assets/images/russia.jpeg" alt="St Basil's Cathedral, Russia"
+        image: "assets/images/russia.jpeg",
         a: "America",
         b: "Bangladesh",
         c: "Russia",
@@ -136,7 +136,7 @@ let questions = [
         answer: "option-c"
     },
     {
-        image: "assets/images/south-africa.jpeg" alt="Table Mountain, South Africa"
+        image: "assets/images/south-africa.jpeg",
         a: "South Africa",
         b: "Italy",
         c: "Switzerland",
@@ -144,7 +144,7 @@ let questions = [
         answer: "option-a"
     },
     {
-        image: "assets/images/turkey.jpeg" alt="Hagia Sophia, Turkey"
+        image: "assets/images/turkey.jpeg",
         a: "Israel",
         b: "Turkey",
         c: "Kuwait",
@@ -152,7 +152,7 @@ let questions = [
         answer: "option-a"
     },
     {
-        image: "assets/images/cambodia.jpeg" alt="Angkor Watt, Cambodia"
+        image: "assets/images/cambodia.jpeg",
         a: "China",
         b: "Thailand",
         c: "Malaysia",
