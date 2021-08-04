@@ -28,8 +28,8 @@ header > h1 {
     font-size: 2.0rem;
 }
 
-/*Insrtuction-container styles*/
-#instruction-container {
+/*Instruction-container styles*/
+#instruction-container, #game-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,4 +65,26 @@ header > h1 {
     font-size: 1.5rem;
     cursor: pointer;
     width: 70vw;
+}
+
+/*Game-container styles*/
+#game-container {
+    min-height: 500px;
+}
+
+#game-container > img {
+    flex: 0.2;
+    width: 90%;
+    height: auto;
+} 
+
+#game-container > button {
+    flex: 0.1;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: #274472;
+    color: #C3E0E5;
+    cursor: pointer;
+    width: 70vw;
+    text-decoration: none;
 }
