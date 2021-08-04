@@ -10,6 +10,10 @@ body{
     background-color:#417295;;
 }
 
+.hide {
+    display: none;
+}
+
 /*Header styles*/
 header {
     display: flex;
@@ -92,5 +96,11 @@ header > h1 {
 /*Score-container styles*/
 #score-container {
     min-height: 200px;
+}
+
+/*Footer styles*/
+footer > p {
+    color: #C3E0E5;
+    text-align: center;
 }
 
