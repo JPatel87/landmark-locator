@@ -33,15 +33,14 @@ header > h1 {
 }
 
 /*Instruction-container styles*/
-#instruction-container, #game-container, #score-container {
+#instruction-container, #game-container, #score-container, #option-choices {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-content: center;
     align-items: center;
     background-color: #C3E0E5;
     border-radius: 8px;
-    min-height: 300px;
+    min-height: 150px;
     width: 80%;
     margin-left: auto;
     margin-right: auto; 
@@ -73,7 +72,7 @@ header > h1 {
 
 /*Game-container styles*/
 #game-container {
-    min-height: 500px;
+    min-height: 300px;
 }
 
 #game-container > p {
@@ -94,14 +93,14 @@ header > h1 {
     height: auto;
 } 
 
-.option {
-    flex: 0.1;
+.choice {
+    flex: 1;
     font-size: 1.2rem;
     border-radius: 8px;
     background-color: #274472;
     color: #C3E0E5;
     cursor: pointer;
-    width: 70vw;
+    width: 100%;
     text-decoration: none;
 }
 
