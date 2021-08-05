@@ -36,6 +36,9 @@ function setQuestion() {
     choiceD.innerHTML = q.d;
 }
 
+
+let timeOut;
+
 //check answer and change colour 
 function buttonColorA() {
     if (choiceA.innerHTML === questions[currentQuestion].correct) {
@@ -46,6 +49,7 @@ function buttonColorA() {
     } else {
     choiceA.classList.add('incorrect-choice');
     }
+    timeOut = setTimeout(nextQuestion, 2000);
 }
 
 function buttonColorB() {
@@ -79,4 +83,12 @@ function buttonColorD() {
     } else {
     choiceD.classList.add('incorrect-choice');
     }
+}
+
+//set next question 
+function nextQuestion() {
+    choiceA.classList.remove('correct-choice');
+    choiceA.classList.remove('incorrect-choice');
+    currentQuestion++
+    setQuestion()
 }
