@@ -16,10 +16,8 @@ const choiceASelect = document.getElementById('choice-a').addEventListener('clic
 const choiceBSelect = document.getElementById('choice-b').addEventListener('click', buttonColorB);
 const choiceCSelect = document.getElementById('choice-c').addEventListener('click', buttonColorC);
 const choiceDSelect = document.getElementById('choice-d').addEventListener('click', buttonColorD);
-
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
-
 
 //startGame
 function startGame() {
@@ -41,32 +39,44 @@ function setQuestion() {
 //check answer and change colour 
 function buttonColorA() {
     if (choiceA.innerHTML === questions[currentQuestion].correct) {
-    choiceA.style.backgroundColor = "green";
+    choiceA.classList.add('correct-choice');
+    choiceB.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    choiceD.setAttribute("disabled", "disabled");
     } else {
-    choiceA.style.backgroundColor = "red";
+    choiceA.classList.add('incorrect-choice');
     }
 }
 
 function buttonColorB() {
     if (choiceB.innerHTML === questions[currentQuestion].correct) {
-    choiceB.style.backgroundColor = "green";
+    choiceB.classList.add('correct-choice');
+    choiceA.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    choiceD.setAttribute("disabled", "disabled");
     } else {
-    choiceB.style.backgroundColor = "red";
+    choiceB.classList.add('incorrect-choice');
     }
 }
 
 function buttonColorC() {
     if (choiceC.innerHTML === questions[currentQuestion].correct) {
-    choiceC.style.backgroundColor = "green";
+    choiceB.classList.add('correct-choice');
+    choiceA.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    choiceD.setAttribute("disabled", "disabled");
     } else {
-    choiceC.style.backgroundColor = "red";
+    choiceC.classList.add('incorrect-choice');
     }
 }
 
 function buttonColorD() {
     if (choiceD.innerHTML === questions[currentQuestion].correct) {
-    choiceD.style.backgroundColor = "green";
+    choiceD.classList.add('correct-choice');
+    choiceB.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    choiceA.setAttribute("disabled", "disabled");
     } else {
-    choiceD.style.backgroundColor = "red";
+    choiceD.classList.add('incorrect-choice');
     }
 }

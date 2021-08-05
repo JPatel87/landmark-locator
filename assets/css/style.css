@@ -140,6 +140,10 @@ footer > p {
 }
 
 /*choice-select style*/
-.choice-color {
-    background-color: lightcoral;
+.correct-choice {
+    background-color: green;
+}
+
+.incorrect-choice {
+    background-color: red;
 }
