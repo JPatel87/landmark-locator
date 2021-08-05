@@ -5,7 +5,7 @@ let questions = [
         b: "Cambodia",
         c: "Pakistan",
         d: "China",
-        answer: "option-a"
+        correct: "India"
     },
     {
         image: "assets/images/america.jpeg",
@@ -13,7 +13,7 @@ let questions = [
         b: "America",
         c: "Cuba",
         d: "Venezuala",
-        answer: "option-b"
+        answer: "America"
     },
     {
         image: "assets/images/austrailia.jpeg",

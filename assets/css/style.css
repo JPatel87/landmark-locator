@@ -126,7 +126,7 @@ footer > p {
     text-align: center;
 }
 
-/*Hide class*/
+/*Hide style*/
 #game-container.hide {
     display: none;
 }
@@ -137,4 +137,9 @@ footer > p {
 
 .hide {
     display: none;
+}
+
+/*choice-select style*/
+.choice-color {
+    background-color: lightcoral;
 }
