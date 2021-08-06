@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 //Variable declarations
 const play = document.getElementById('play-btn').addEventListener('click', startGame);
 const gameContainer = document.getElementById('game-container');
-const instructionContainer = document.getElementById('instruction-container');
 const landmark = document.getElementById('image');
 const choiceA = document.getElementById('choice-a');
 const choiceB = document.getElementById('choice-b');
@@ -20,10 +19,11 @@ const questionCounter = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
+const instructionContainer = document.getElementById('instruction-container');
 
 //startGame
 function startGame() {
-    instructionContainer.classList.add('hide');
+    instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
     setQuestion();
     currentQuestionCounter() 
