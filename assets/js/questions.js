@@ -13,7 +13,7 @@ let questions = [
         b: "America",
         c: "Cuba",
         d: "Venezuala",
-        answer: "America"
+        correct: "America"
     },
     {
         image: "assets/images/austrailia.jpeg",
@@ -21,7 +21,7 @@ let questions = [
         b: "Austrailia",
         c: "Portugal",
         d: "Greece",
-        answer: "option-b"
+        correct: "Austrailia"
     },
     {
         image: "assets/images/bavaria.jpeg",
@@ -29,7 +29,7 @@ let questions = [
         b: "Belgium",
         c: "Bavaria",
         d: "Russia",
-        answer: "option-c"
+        correct: "Bavaria"
     },
     {
         image: "assets/images/brazil.jpeg",
@@ -37,7 +37,7 @@ let questions = [
         b: "Brazil",
         c: "Portugal",
         d: "Greece",
-        answer: "option-b"
+        correct: "Brazil"
     },
     {
         image: "assets/images/china.jpeg",
@@ -45,7 +45,7 @@ let questions = [
         b: "Japan",
         c: "Sri Lanka",
         d: "Malaysia",
-        answer: "option-a"
+        correct: "China"
     },
     {
         image: "assets/images/egypt.jpeg",
@@ -53,7 +53,7 @@ let questions = [
         b: "Egypt",
         c: "Kenya",
         d: "South Africa",
-        answer: "option-b"
+        correct: "Egypt"
     },
     {
         image: "assets/images/england.jpeg",
@@ -61,7 +61,7 @@ let questions = [
         b: "Italy",
         c: "England",
         d: "Norway",
-        answer: "option-c"
+        correct: "England"
     },
     {
         image: "assets/images/france.jpeg",
@@ -69,7 +69,7 @@ let questions = [
         b: "France",
         c: "England",
         d: "Norway",
-        answer: "option-b"
+        correct: "France"
     },
     {
         image: "assets/images/germany.jpeg",
@@ -77,15 +77,15 @@ let questions = [
         b: "Bulgaria",
         c: "Switzerland",
         d: "Swedan",
-        answer: "option-a"
+        correct: "Germany"
     },
     {
         image: "assets/images/greece.jpeg",
         a: "Croatia",
-        b: "Ma",
+        b: "Morroco",
         c: "Bahamas",
         d: "Greece",
-        answer: "option-d"
+        correct: "Greece"
     },
     {
         image: "assets/images/italy.jpeg",
@@ -93,7 +93,7 @@ let questions = [
         b: "Costa Rica",
         c: "Brazil",
         d: "Italy",
-        answer: "option-d"
+        correct: "Italy"
     },
     {
         image: "assets/images/japan.jpeg",
@@ -101,7 +101,7 @@ let questions = [
         b: "Philippenes",
         c: "Morroco",
         d: "Japan",
-        answer: "option-d"
+        correct: "Japan"
     },
     {
         image: "assets/images/malaysia.jpeg",
@@ -109,7 +109,7 @@ let questions = [
         b: "Malaysia",
         c: "Kuwait",
         d: "Dubai",
-        answer: "option-b"
+        correct: "Malysia"
     },
     {
         image: "assets/images/mexico.jpeg",
@@ -117,7 +117,7 @@ let questions = [
         b: "Kazakhstan",
         c: "Mexico",
         d: "Egypt",
-        answer: "option-c"
+        correct: "Mexico"
     },
     {
         image: "assets/images/peru.jpeg",
@@ -125,7 +125,7 @@ let questions = [
         b: "Jordan",
         c: "Peru",
         d: "Argentina",
-        answer: "option-c"
+        correct: "Peru"
     },
     {
         image: "assets/images/russia.jpeg",
@@ -133,7 +133,7 @@ let questions = [
         b: "Bangladesh",
         c: "Russia",
         d: "Botswana",
-        answer: "option-c"
+        correct: "Russia"
     },
     {
         image: "assets/images/south-africa.jpeg",
@@ -141,7 +141,7 @@ let questions = [
         b: "Italy",
         c: "Switzerland",
         d: "Seychells",
-        answer: "option-a"
+        correct: "South Africa"
     },
     {
         image: "assets/images/turkey.jpeg",
@@ -149,7 +149,7 @@ let questions = [
         b: "Turkey",
         c: "Kuwait",
         d: "Armenia",
-        answer: "option-a"
+        correct: "Turkey"
     },
     {
         image: "assets/images/cambodia.jpeg",
@@ -157,6 +157,6 @@ let questions = [
         b: "Thailand",
         c: "Malaysia",
         d: "Cambodia",
-        answer: "option-d"
+        correct: "Cambodia"
     }
 ];

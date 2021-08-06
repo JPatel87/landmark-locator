@@ -36,7 +36,6 @@ function setQuestion() {
     choiceD.innerHTML = q.d;
 }
 
-
 let timeOut;
 
 //check answer and change colour 
@@ -46,10 +45,14 @@ function buttonColorA() {
     choiceB.setAttribute("disabled", "disabled");
     choiceC.setAttribute("disabled", "disabled");
     choiceD.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetA, 5000)
     } else {
     choiceA.classList.add('incorrect-choice');
+    choiceB.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    choiceD.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetA, 5000)
     }
-    timeOut = setTimeout(nextQuestion, 2000);
 }
 
 function buttonColorB() {
@@ -58,37 +61,87 @@ function buttonColorB() {
     choiceA.setAttribute("disabled", "disabled");
     choiceC.setAttribute("disabled", "disabled");
     choiceD.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetB, 5000)
     } else {
     choiceB.classList.add('incorrect-choice');
+    choiceA.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    choiceD.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetB, 5000)
     }
 }
 
 function buttonColorC() {
     if (choiceC.innerHTML === questions[currentQuestion].correct) {
-    choiceB.classList.add('correct-choice');
+    choiceC.classList.add('correct-choice');
     choiceA.setAttribute("disabled", "disabled");
     choiceC.setAttribute("disabled", "disabled");
     choiceD.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetC, 10000)
     } else {
     choiceC.classList.add('incorrect-choice');
+    choiceA.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    choiceD.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetC, 10000)
     }
 }
 
 function buttonColorD() {
     if (choiceD.innerHTML === questions[currentQuestion].correct) {
     choiceD.classList.add('correct-choice');
+    choiceA.setAttribute("disabled", "disabled");
     choiceB.setAttribute("disabled", "disabled");
     choiceC.setAttribute("disabled", "disabled");
-    choiceA.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetD, 10000)
     } else {
     choiceD.classList.add('incorrect-choice');
+    choiceA.setAttribute("disabled", "disabled");
+    choiceB.setAttribute("disabled", "disabled");
+    choiceC.setAttribute("disabled", "disabled");
+    timeOut = setTimeout(colorResetD, 10000)
     }
 }
 
-//set next question 
-function nextQuestion() {
+//Colour reset
+function colorResetA() {
     choiceA.classList.remove('correct-choice');
-    choiceA.classList.remove('incorrect-choice');
+    choiceA.classList.remove('incorrect-choice')
+    choiceB.removeAttribute("disabled");
+    choiceC.removeAttribute("disabled");
+    choiceD.removeAttribute("disabled");
+    nextQuestion()
+}
+
+function colorResetB() {
+    choiceB.classList.remove('correct-choice');
+    choiceB.classList.remove('incorrect-choice')
+    choiceA.removeAttribute("disabled");
+    choiceC.removeAttribute("disabled");
+    choiceD.removeAttribute("disabled");
+    nextQuestion()
+}
+
+function colorResetC() {
+    choiceC.classList.remove('correct-choice');
+    choiceC.classList.remove('incorrect-choice')
+    choiceA.removeAttribute("disabled");
+    choiceB.removeAttribute("disabled");
+    choiceD.removeAttribute("disabled");
+    nextQuestion()
+}
+
+function colorResetD() {
+    choiceD.classList.remove('correct-choice');
+    choiceD.classList.remove('incorrect-choice')
+    choiceA.removeAttribute("disabled");
+    choiceB.removeAttribute("disabled");
+    choiceC.removeAttribute("disabled");
+    nextQuestion()
+}
+
+//set next question
+function nextQuestion() {
     currentQuestion++
     setQuestion()
 }
