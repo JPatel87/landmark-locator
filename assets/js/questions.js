@@ -109,7 +109,7 @@ let questions = [
         b: "Malaysia",
         c: "Kuwait",
         d: "Dubai",
-        correct: "Malysia"
+        correct: "Malaysia"
     },
     {
         image: "assets/images/mexico.jpeg",
