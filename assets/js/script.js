@@ -106,9 +106,9 @@ function nextQuestion() {
 function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
-    let summary = (numberAnswersCorrect >=15) ? "Brilliant attempt":
-                  (numberAnswersCorrect >=10) ? "Great attempt":
-                  (numberAnswersCorrect >=5) ? "Fair attempt":"Nevermind, play again"
+    let summary = (numberAnswersCorrect >=15) ? "Your geography is excellant! Great job":
+                  (numberAnswersCorrect >=10) ? "Well done, your at least half way there, would you like to try again?":
+                  (numberAnswersCorrect >=1) ? "Good attempt, perhaps another tour might jog your memory!" : "Whoops! Looks like we lost you! Shall we go again?"
     finalScore.innerHTML = `You scored ${numberAnswersCorrect} out of 20`;
     scoreFeedback.innerHTML = `${summary}`;
 }
