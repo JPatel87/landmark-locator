@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 //Variable declarations
 const play = document.getElementById('play-btn').addEventListener('click', startGame);
+const playAgain = document.getElementById('play-again-btn').addEventListener('click', restartGame);
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmark = document.getElementById('image');
@@ -29,14 +30,13 @@ const questionNumber = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-let maxQuestions = 20;
+let maxQuestions = 5;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
 
 //startGame
 function startGame() {
-
     instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
     setQuestion();
@@ -106,10 +106,21 @@ function nextQuestion() {
 function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
-    let summary = (numberAnswersCorrect >=15) ? "Your geography is excellant! Great job":
-                  (numberAnswersCorrect >=10) ? "Well done, your at least half way there, would you like to try again?":
-                  (numberAnswersCorrect >=1) ? "Good attempt, perhaps another tour might jog your memory!" : "Whoops! Looks like we lost you! Shall we go again?"
+    let summary = (numberAnswersCorrect <=5) ? "Lets tour again and improve this score":
+                  (numberAnswersCorrect <=10) ? "Fair effort, perhaps a re-tour may jog your memory?":
+                  (numberAnswersCorrect <=15) ? "Good effort, only a few errors, why not re-tour?":
+                  (numberAnswersCorrect <=19) ? "Great effort, almost perfection" : "Superb effort, your Geography is perfect!"
     finalScore.innerHTML = `You scored ${numberAnswersCorrect} out of 20`;
     scoreFeedback.innerHTML = `${summary}`;
 }
 
+function restartGame() {
+    instructionContainer.style.display = 'none';
+    scoreContainer.classList.add('hide');
+    gameContainer.classList.remove('hide');
+    currentQuestionActual = 1
+    currentQuestion = 0;
+    numberAnswersCorrect = 0;
+    setQuestion();
+    currentQuestionDisplay() 
+};
