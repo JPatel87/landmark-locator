@@ -57,7 +57,9 @@ header > h1 {
     flex: 0.1;
 }
 
-#play-btn, #play-again-btn {
+#play-btn,
+#play-again-btn, 
+#home-btn {
     flex: 0.1;
     background-color: #274472;
     border-radius: 8px;

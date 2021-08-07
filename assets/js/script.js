@@ -12,6 +12,7 @@ const choiceA = document.getElementById('choice-a');
 const choiceB = document.getElementById('choice-b');
 const choiceC = document.getElementById('choice-c');
 const choiceD = document.getElementById('choice-d');
+const scoreContainer = document.getElementById('score-container')
 const choiceASelect = document.getElementById('choice-a').addEventListener('click', function() {
     buttonColor('choice-a')
 });
@@ -29,10 +30,13 @@ const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
 let maxQuestions = 20;
-let numberAnswersCorrect = 0
+let numberAnswersCorrect = 0;
+let finalScore = document.getElementById('final-score');
+let scoreFeedback = document.getElementById('score-feedback')
 
 //startGame
 function startGame() {
+
     instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
     setQuestion();
@@ -95,7 +99,17 @@ function nextQuestion() {
         currentQuestionDisplay();
         setQuestion();
     } else {
-        console.log("end questions")
+        endGameSummary()
     }
+}
+
+function endGameSummary() {
+    gameContainer.classList.add('hide');
+    scoreContainer.classList.remove('hide');
+    let summary = (numberAnswersCorrect >=15) ? "Brilliant attempt":
+                  (numberAnswersCorrect >=10) ? "Great attempt":
+                  (numberAnswersCorrect >=5) ? "Fair attempt":"Nevermind, play again"
+    finalScore.innerHTML = `You scored ${numberAnswersCorrect} out of 20`;
+    scoreFeedback.innerHTML = `${summary}`;
 }
 
