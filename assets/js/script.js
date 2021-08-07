@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 //Variable declarations
 const play = document.getElementById('play-btn').addEventListener('click', startGame);
+const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmark = document.getElementById('image');
 const choiceA = document.getElementById('choice-a');
@@ -15,18 +16,18 @@ const choiceASelect = document.getElementById('choice-a').addEventListener('clic
 const choiceBSelect = document.getElementById('choice-b').addEventListener('click', buttonColorB);
 const choiceCSelect = document.getElementById('choice-c').addEventListener('click', buttonColorC);
 const choiceDSelect = document.getElementById('choice-d').addEventListener('click', buttonColorD);
-const questionCounter = document.getElementById('question-number');
+const questionNumber = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-const instructionContainer = document.getElementById('instruction-container');
+let maxQuestions = 20;
 
 //startGame
 function startGame() {
     instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
     setQuestion();
-    currentQuestionCounter() 
+    currentQuestionDisplay() 
 }
 
 //set question
@@ -39,9 +40,9 @@ function setQuestion() {
     choiceD.innerHTML = q.d;
 }
 
-//set question counter
-function currentQuestionCounter() {
-    questionCounter.innerHTML = currentQuestionActual;
+//set question display
+function currentQuestionDisplay() {
+    questionNumber.innerHTML = `Question ${currentQuestionActual} of ${maxQuestions}`
 }
 
 let timeOut;
@@ -152,6 +153,11 @@ function colorResetD() {
 function nextQuestion() {
     currentQuestion++;
     currentQuestionActual++;
-    currentQuestionCounter();
-    setQuestion();
+    if (currentQuestionActual <= maxQuestions) {
+        console.log(currentQuestionActual)
+        currentQuestionDisplay();
+        setQuestion();
+    } else {
+        console.log("end questions")
+    }
 }
