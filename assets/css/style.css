@@ -150,3 +150,8 @@ footer > p {
 .incorrect-choice {
     background-color: red;
 }
+
+/*disabled stye*/
+button[disabled] {
+    opacity: 0.7;
+}
