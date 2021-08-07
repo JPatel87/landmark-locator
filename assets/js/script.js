@@ -29,6 +29,7 @@ const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
 let maxQuestions = 20;
+let numberAnswersCorrect = 0
 
 //startGame
 function startGame() {
@@ -58,6 +59,8 @@ function buttonColor(choice) {
     const choiceSelect = document.getElementById(choice)
     if (choiceSelect.innerHTML === questions[currentQuestion].correct) {
     choiceSelect.classList.add('correct-choice');
+    numberAnswersCorrect++
+    console.log(numberAnswersCorrect)
     } else {
     choiceSelect.classList.add('incorrect-choice');
     }
@@ -89,10 +92,10 @@ function nextQuestion() {
     currentQuestion++;
     currentQuestionActual++;
     if (currentQuestionActual <= maxQuestions) {
-        console.log(currentQuestionActual)
         currentQuestionDisplay();
         setQuestion();
     } else {
         console.log("end questions")
     }
 }
+
