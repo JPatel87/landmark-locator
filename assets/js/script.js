@@ -12,10 +12,18 @@ const choiceA = document.getElementById('choice-a');
 const choiceB = document.getElementById('choice-b');
 const choiceC = document.getElementById('choice-c');
 const choiceD = document.getElementById('choice-d');
-const choiceASelect = document.getElementById('choice-a').addEventListener('click', buttonColorA);
-const choiceBSelect = document.getElementById('choice-b').addEventListener('click', buttonColorB);
-const choiceCSelect = document.getElementById('choice-c').addEventListener('click', buttonColorC);
-const choiceDSelect = document.getElementById('choice-d').addEventListener('click', buttonColorD);
+const choiceASelect = document.getElementById('choice-a').addEventListener('click', function() {
+    buttonColor('choice-a')
+});
+const choiceBSelect = document.getElementById('choice-b').addEventListener('click', function() {
+    buttonColor('choice-b')
+});
+const choiceCSelect = document.getElementById('choice-c').addEventListener('click', function() {
+    buttonColor('choice-c')
+});
+const choiceDSelect = document.getElementById('choice-d').addEventListener('click', function() {
+    buttonColor('choice-d')
+});
 const questionNumber = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
@@ -45,107 +53,34 @@ function currentQuestionDisplay() {
     questionNumber.innerHTML = `Question ${currentQuestionActual} of ${maxQuestions}`
 }
 
-let timeOut;
+//change button color once clicked
+function buttonColor(choice) {
+    const choiceSelect = document.getElementById(choice)
+    if (choiceSelect.innerHTML === questions[currentQuestion].correct) {
+    choiceSelect.classList.add('correct-choice');
+    } else {
+    choiceSelect.classList.add('incorrect-choice');
+    }
+    disableChoices()
+    timeOut = setTimeout(function() {
+        choiceColorReset(choiceSelect)
+    }, 3000);
+}
 
-//check answer and change colour 
-function buttonColorA() {
-    if (choiceA.innerHTML === questions[currentQuestion].correct) {
-    choiceA.classList.add('correct-choice');
+function disableChoices() {
+    choiceA.setAttribute("disabled", "disabled");
     choiceB.setAttribute("disabled", "disabled");
     choiceC.setAttribute("disabled", "disabled");
     choiceD.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetA, 3000);
-    } else {
-    choiceA.classList.add('incorrect-choice');
-    choiceB.setAttribute("disabled", "disabled");
-    choiceC.setAttribute("disabled", "disabled");
-    choiceD.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetA, 3000);
-    }
 }
 
-function buttonColorB() {
-    if (choiceB.innerHTML === questions[currentQuestion].correct) {
-    choiceB.classList.add('correct-choice');
-    choiceA.setAttribute("disabled", "disabled");
-    choiceC.setAttribute("disabled", "disabled");
-    choiceD.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetB, 3000);
-    } else {
-    choiceB.classList.add('incorrect-choice');
-    choiceA.setAttribute("disabled", "disabled");
-    choiceC.setAttribute("disabled", "disabled");
-    choiceD.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetB, 3000);
-    }
-}
-
-function buttonColorC() {
-    if (choiceC.innerHTML === questions[currentQuestion].correct) {
-    choiceC.classList.add('correct-choice');
-    choiceA.setAttribute("disabled", "disabled");
-    choiceC.setAttribute("disabled", "disabled");
-    choiceD.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetC, 3000);
-    } else {
-    choiceC.classList.add('incorrect-choice');
-    choiceA.setAttribute("disabled", "disabled");
-    choiceC.setAttribute("disabled", "disabled");
-    choiceD.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetC, 3000);
-    }
-}
-
-function buttonColorD() {
-    if (choiceD.innerHTML === questions[currentQuestion].correct) {
-    choiceD.classList.add('correct-choice');
-    choiceA.setAttribute("disabled", "disabled");
-    choiceB.setAttribute("disabled", "disabled");
-    choiceC.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetD, 3000);
-    } else {
-    choiceD.classList.add('incorrect-choice');
-    choiceA.setAttribute("disabled", "disabled");
-    choiceB.setAttribute("disabled", "disabled");
-    choiceC.setAttribute("disabled", "disabled");
-    timeOut = setTimeout(colorResetD, 3000);
-    }
-}
-
-//Colour reset
-function colorResetA() {
-    choiceA.classList.remove('correct-choice');
-    choiceA.classList.remove('incorrect-choice');
+function choiceColorReset(choiceSelect) {
+    choiceSelect.classList.remove('correct-choice');
+    choiceSelect.classList.remove('incorrect-choice');
+    choiceA.removeAttribute("disabled")
     choiceB.removeAttribute("disabled");
     choiceC.removeAttribute("disabled");
     choiceD.removeAttribute("disabled");
-    nextQuestion();
-}
-
-function colorResetB() {
-    choiceB.classList.remove('correct-choice');
-    choiceB.classList.remove('incorrect-choice');
-    choiceA.removeAttribute("disabled");
-    choiceC.removeAttribute("disabled");
-    choiceD.removeAttribute("disabled");
-    nextQuestion();
-}
-
-function colorResetC() {
-    choiceC.classList.remove('correct-choice');
-    choiceC.classList.remove('incorrect-choice');
-    choiceA.removeAttribute("disabled");
-    choiceB.removeAttribute("disabled");
-    choiceD.removeAttribute("disabled");
-    nextQuestion();
-}
-
-function colorResetD() {
-    choiceD.classList.remove('correct-choice');
-    choiceD.classList.remove('incorrect-choice');
-    choiceA.removeAttribute("disabled");
-    choiceB.removeAttribute("disabled");
-    choiceC.removeAttribute("disabled");
     nextQuestion();
 }
 
