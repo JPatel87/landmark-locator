@@ -92,6 +92,7 @@ header > h1 {
     flex: 0.2;
     width: 80%;
     height: auto;
+    border-radius: 8px;
 } 
 
 .choice {
@@ -140,7 +141,6 @@ footer > p {
 .hide {
     display: none;
 }
-
 
 /*choice-select style*/
 .correct-choice {
