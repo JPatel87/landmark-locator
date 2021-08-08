@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 //Variable declarations
 const play = document.getElementById('play-btn').addEventListener('click', startGame);
 const playAgain = document.getElementById('play-again-btn').addEventListener('click', restartGame);
+const homeButton = document.getElementById('home-btn').addEventListener('click', homeDisplay);
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmark = document.getElementById('image');
@@ -30,7 +31,7 @@ const questionNumber = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-let maxQuestions = 5;
+let maxQuestions = 1;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
@@ -114,6 +115,7 @@ function endGameSummary() {
     scoreFeedback.innerHTML = `${summary}`;
 }
 
+//restart Game
 function restartGame() {
     instructionContainer.style.display = 'none';
     scoreContainer.classList.add('hide');
@@ -124,3 +126,14 @@ function restartGame() {
     setQuestion();
     currentQuestionDisplay() 
 };
+
+//home display
+function homeDisplay() {
+    instructionContainer.style.display = 'block'
+    scoreContainer.classList.add('hide');
+    currentQuestionActual = 1
+    currentQuestion = 0;
+    numberAnswersCorrect = 0;
+    setQuestion();
+    currentQuestionDisplay()
+}
