@@ -9,7 +9,7 @@ let questions = [
         correct: "India"
     },
     {
-        image: "assets/images/america.jpeg",
+        image: "assets/images/usa.jpeg",
         alt: "Statue Of Liberty",
         a: "Colombia",
         b: "USA",
