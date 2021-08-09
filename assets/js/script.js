@@ -31,7 +31,7 @@ const questionNumber = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-let maxQuestions = 1;
+let maxQuestions = 20;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
@@ -48,6 +48,7 @@ function startGame() {
 function setQuestion() {
     let q = questions[currentQuestion];
     landmark.src = q.image;
+    landmark.alt = q.alt;
     choiceA.innerHTML = q.a;
     choiceB.innerHTML = q.b;
     choiceC.innerHTML = q.c;
