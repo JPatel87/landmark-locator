@@ -39,7 +39,7 @@ header > h1 {
     align-items: center;
     background-color: #C3E0E5;
     border-radius: 8px;
-    min-height: 150px;
+    min-height: 400px;
     width: 80%;
     margin-left: auto;
     margin-right: auto; 
@@ -56,6 +56,7 @@ header > h1 {
     width: 50%;
     height: auto;
     border-radius: 8px;
+    padding: 10px;
 }
 
 #instruction-container > p {
@@ -76,6 +77,7 @@ header > h1 {
     font-size: 1.5rem;
     cursor: pointer;
     width: 70vw;
+    margin-bottom: 10px;
 }
 
 /*Countdown timer styles*/
