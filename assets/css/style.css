@@ -23,6 +23,24 @@ body{
     display: flex;
 }
 
+.heading-two{
+    text-align: center;
+    font-size: 1.8rem;
+    color: #18A558;
+}
+
+.heading-three{
+    text-align: center;
+    font-size: 1.55rem;
+    color: #274472;
+}
+
+.paragraph {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #274472;
+}
+
 /*Header styles*/
 header {
     display: flex;
@@ -90,25 +108,6 @@ footer > p {
     flex: 0.2;
     width: 40%;
     height: auto;
-}
-
-#instruction-container > h2{
-    text-align: center;
-    font-size: 1.8rem;
-    color: #18A558;
-}
-
-#instruction-container > h3 {
-    text-align: center;
-    font-size: 1.55rem;
-    color: #274472;
-}
-
-.instruction-paragraph {
-    text-align: center;
-    font-size: 1.3rem;
-    color: #274472;
-    flex: 0.1;
 }
 
 #start-btn {
