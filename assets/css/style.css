@@ -51,6 +51,13 @@ header > h1 {
     flex: 0.1;
 }
 
+#home-display {
+    flex: 0.2;
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
 #instruction-container > p {
     text-align: center;
     color: #274472;
@@ -71,18 +78,17 @@ header > h1 {
     width: 70vw;
 }
 
+/*Countdown timer styles*/
+#counter{
+    font-size: 3em;
+}
+   
 /*Game-container styles*/
 #game-container {
     min-height: 300px;
 }
 
 #game-container > p {
-    text-align: center;
-    color: #274472;
-    flex: 0.1;
-}
-
-#timer > p {
     text-align: center;
     color: #274472;
     flex: 0.1;

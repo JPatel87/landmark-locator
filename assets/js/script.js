@@ -31,16 +31,21 @@ const questionNumber = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-let maxQuestions = 2;
+let maxQuestions = 3;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
+let timeLeftDisplay = document.getElementById('time-left')
+
+let timeLeft = 10
+let timer;
 
 //startGame
 function startGame() {
     instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
     setQuestion();
+    countDown();
     currentQuestionDisplay() 
 }
 
@@ -53,6 +58,18 @@ function setQuestion() {
     choiceB.innerHTML = q.b;
     choiceC.innerHTML = q.c;
     choiceD.innerHTML = q.d;
+}
+
+//timer
+function countDown() {
+    timer = setInterval(function(){
+        if(timeLeft <=0) {
+            clearInterval(timeLeft)
+            nextQuestion()
+        } 
+        timeLeftDisplay.innerHTML = `${timeLeft} seconds`
+        timeLeft -=1
+    }, 1000)
 }
 
 //set question display
@@ -73,7 +90,7 @@ function buttonColor(choice) {
     disableChoices()
     timeOut = setTimeout(function() {
         choiceColorReset(choiceSelect)
-    }, 3000);
+    }, 1000);
 }
 
 function disableChoices() {
@@ -95,6 +112,9 @@ function choiceColorReset(choiceSelect) {
 
 //set next question
 function nextQuestion() {
+    clearInterval(timer);
+    timeLeft = 10;
+    countDown();
     currentQuestion++;
     currentQuestionActual++;
     if (currentQuestionActual <= maxQuestions) {
@@ -118,23 +138,26 @@ function endGameSummary() {
 
 //restart Game
 function restartGame() {
+    scoreContainer.classList.add('hide')
     instructionContainer.style.display = 'none';
-    scoreContainer.classList.add('hide');
     gameContainer.classList.remove('hide');
     currentQuestionActual = 1
+    currentQuestionDisplay()
     currentQuestion = 0;
     numberAnswersCorrect = 0;
     setQuestion();
-    currentQuestionDisplay() 
+    clearInterval(timer);
+    countDown()
 };
 
 //home display
 function homeDisplay() {
-    instructionContainer.style.display = 'block'
+    instructionContainer.style.display = 'flex'
     scoreContainer.classList.add('hide');
     currentQuestionActual = 1
+    currentQuestionDisplay()
     currentQuestion = 0;
     numberAnswersCorrect = 0;
     setQuestion();
-    currentQuestionDisplay()
-}
+    clearInterval(timer);
+};
