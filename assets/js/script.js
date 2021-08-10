@@ -148,18 +148,23 @@ function endGameSummary() {
     switch (summaryText) {
         case 'Lets tour again and improve this score':
             scoreImage.src = 'assets/images/low-score.png'
+            scoreImage.alt = 'emoji for low score'
             break;
         case 'Fair effort, perhaps another tour may jog your memory?':
             scoreImage.src = 'assets/images/average-score.png'
+            scoreImage.alt = 'emoji for average score'
             break;
         case 'Good effort, only a few errors, tour again?':
             scoreImage.src = 'assets/images/high-score.png'
+            scoreImage.alt = 'emoji for high score'
             break;
         case 'Great effort, almost perfection':
             scoreImage.src = 'assets/images/very-high-score.png'
+            scoreImage.alt = 'emoji for very high score'
             break;
         default: 
             scoreImage.src = 'assets/images/perfect-score.png';
+            scoreImage.alt = 'emoji for perfect score'
     }
 }
 
