@@ -175,7 +175,7 @@ footer > p {
     background-color: red;
 }
 
-/*disabled button stye*/
+/*disabled button style*/
 button[disabled] {
     opacity: 0.6;
 }
