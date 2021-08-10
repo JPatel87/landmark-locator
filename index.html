@@ -14,44 +14,50 @@
     <title>Locate the Landmark</title>
 </head>
 <body>
-    <!--header-->
-    <header>
-        <i class="fas fa-landmark"></i>
-        <h1>Locate the Landmark</h1>
-    </header>
-    <!--instruction container-->
-    <div id="instruction-container" class="hide">
-        <img id="home-display" src="assets/images/home-display.png" alt="Earth Cartoon">
-        <p>Hello! You are about to go on a world tour! <br><br> You will be shown famous landmarks from around the world and your job is to correctly identify the country the landmark belongs to, from 4 choices.<br><br> Be warned! You will only have 10 seconds to make your selection!<br><br> So fasten your seatbelt and enjoy the ride!</p>
-        <button id="play-btn">Play</button> 
-    </div>
-    <!--game container-->
-    <div id="game-container" class="hide">
-        <h3 id="question-number"></h3>
-        <p>Time left:<span id="time-left">10</span></p>
-        <img id="image" class="" src="" alt="">
-        <div id="choices">
-            <button class="choice" id="choice-a"></button>
-            <button class="choice" id ="choice-b"></button>
-            <button class="choice" id="choice-c"></button>
-            <button class="choice" id="choice-d"></button>
+    <div id="container">
+        <!--header-->
+        <header>
+            <i class="fas fa-landmark"></i>
+            <h1>Locate the Landmark</h1>
+        </header>
+        <div id = "main">
+            <!--instruction container-->
+            <div id="instruction-container" class="hide">
+                <img id="home-display" src="assets/images/home-display.png" alt="Earth Cartoon">
+                <p>Hello! You are about to go on a world tour! <br><br> You will be shown famous landmarks from around the world and your job is to correctly identify the country the landmark belongs to, from 4 choices.<br><br> Be warned! You will only have 10 seconds to make your selection!<br><br> So fasten your seatbelt and enjoy the ride!</p>
+                <button id="play-btn">Play</button> 
+            </div>
+            <!--game container-->
+            <div id="game-container" class="hide">
+                <h3 id="question-number"></h3>
+                <p>Time left:<span id="time-left">10</span></p>
+                <img id="image" class="" src="" alt="">
+                <div id="choices">
+                    <button class="choice" id="choice-a"></button>
+                    <button class="choice" id ="choice-b"></button>
+                    <button class="choice" id="choice-c"></button>
+                    <button class="choice" id="choice-d"></button>
+                </div>
+            </div>
+            <!--score container-->
+            <div id="score-container" class="hide">
+                <h2>Well done! You've completed the challenge!</h2>
+                <p id="final-score"></p> 
+                <p id="score-feedback"></p>
+                <button id='play-again-btn'>Play again</button>   
+                <button id='home-btn'>Home</button>   
+            </div>
         </div>
+        <!--footer-->
+        <footer id="footer">
+            <p>Created By Jaime Patel 2021</p>
+        </footer>
+        <!--javascript sheets-->
+        <script src="assets/js/questions.js"></script>
+        <script src="assets/js/script.js"></script>
     </div>
-    <!--score container-->
-    <div id="score-container" class="hide">
-        <h2>Well done! You've completed the challenge!</h2>
-        <p id="final-score"></p> 
-        <p id="score-feedback"></p>
-        <button id='play-again-btn'>Play again</button>   
-        <button id='home-btn'>Home</button>   
-    </div>
-    <!--footer-->
-    <footer id="footer">
-        <p>Created By Jaime Patel 2021</p>
-    </footer>
-    <!--javascript sheets-->
-    <script src="assets/js/questions.js"></script>
-    <script src="assets/js/script.js"></script>
+
+
 </body>
 </html>
   
