@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 //Variable declarations
-const play = document.getElementById('play-btn').addEventListener('click', startGame);
+const play = document.getElementById('start-btn').addEventListener('click', startGame);
 const playAgain = document.getElementById('play-again-btn').addEventListener('click', restartGame);
 const homeButton = document.getElementById('home-btn').addEventListener('click', homeDisplay);
 const instructionContainer = document.getElementById('instruction-container');
@@ -28,7 +28,7 @@ const choiceCSelect = document.getElementById('choice-c').addEventListener('clic
 const choiceDSelect = document.getElementById('choice-d').addEventListener('click', function() {
     buttonColor('choice-d')
 });
-const questionNumber = document.getElementById('question-number');
+const landmarkNumber = document.getElementById('landmark-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
@@ -76,14 +76,14 @@ function countDown() {
             } 
             nextQuestion();
         }
-        timeLeftDisplay.innerHTML = `${timeLeft} second(s)`
+        timeLeftDisplay.innerHTML = `${timeLeft} seconds`
         timeLeft -=1
     }, 1000)
 }
 
 //set question display
 function currentQuestionDisplay() {
-    questionNumber.innerHTML = `Question ${currentQuestionActual} of ${maxQuestions}`
+    landmarkNumber.innerHTML = `Landmark ${currentQuestionActual} of ${maxQuestions}`
 }
 
 //change button color once clicked

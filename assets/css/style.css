@@ -1,4 +1,7 @@
-/*Global styles*/
+
+/*Styling for medium mobile phone devices (screen width between 350px to 450px)*/
+
+/*Generic styles*/
 * {
     margin: 1vw;
     padding: 0;
@@ -10,11 +13,11 @@ body{
     background-color:#417295;
 }
 
-#container {
+.body-container {
     min-height: 100%;
 }
 
-#main {
+.main-body-container {
     overflow: auto;
     padding-bottom: 100px;
     display: flex;
@@ -36,7 +39,6 @@ header > i {
 header > h1 {
     text-align: center;
     color: #C3E0E5;
-    font-size: 2.0rem;
 }
 
 /*Footer styles*/
@@ -52,43 +54,24 @@ footer > p {
     text-align: center;
 }
 
-/*Instruction-container styles*/
 #instruction-container, 
 #game-container, 
 #score-container, 
 #choices {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-content: center;
     align-items: center;
     background-color: #C3E0E5;
     border-radius: 8px;
-    min-height: 150px;
-    width: 80%;
+    min-height: 80vh;
+    width: 95%;
     margin-left: auto;
     margin-right: auto; 
 }
 
-#instruction-container > h2 {
-    text-align: center;
-    color: #274472;
-    flex: 0.1;
-}
-
-#home-display {
-    flex: 0.2;
-    width: 50%;
-    height: auto;
-    border-radius: 8px;
-}
-
-#instruction-container > p {
-    text-align: center;
-    color: #274472;
-    flex: 0.1;
-}
-
-#play-btn,
+#start-btn,
 #play-again-btn, 
 #home-btn {
     flex: 0.1;
@@ -102,12 +85,55 @@ footer > p {
     width: 70vw;
 }
 
-/*Countdown timer styles*/
-#counter{
-    font-size: 3em;
+/*Instruction-container styles*/
+.home-display-img {
+    flex: 0.2;
+    width: 40%;
+    height: auto;
 }
-   
+
+#instruction-container > h2{
+    text-align: center;
+    font-size: 1.8rem;
+    color: #18A558;
+}
+
+#instruction-container > h3 {
+    text-align: center;
+    font-size: 1.55rem;
+    color: #274472;
+}
+
+.instruction-paragraph {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #274472;
+    flex: 0.1;
+}
+
+#start-btn {
+    margin-bottom: 2.5vh;
+}
+
+#start-btn:hover {
+    background-color: #18A558;
+}
+
 /*Game-container styles*/
+#landmark-number {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #18A558;
+    flex: 0.1;
+}
+
+game-container > h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #274472;
+    flex: 0.1;
+}
+
 #game-container {
     min-height: 300px;
 }

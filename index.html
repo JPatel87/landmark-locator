@@ -14,23 +14,27 @@
     <title>Locate the Landmark</title>
 </head>
 <body>
-    <div id="container">
+    <div class="body-container">
         <!--header-->
         <header>
             <i class="fas fa-landmark"></i>
             <h1>Locate the Landmark</h1>
         </header>
-        <div id = "main">
+        <div class="main-body-container">
             <!--instruction container-->
             <div id="instruction-container" class="hide">
-                <img id="home-display" src="assets/images/home-display.png" alt="Earth Cartoon">
-                <p>Hello! You are about to go on a world tour! <br><br> You will be shown famous landmarks from around the world and your job is to correctly identify the country the landmark belongs to, from 4 choices.<br><br> Be warned! You will only have 10 seconds to make your selection!<br><br> So fasten your seatbelt and enjoy the ride!</p>
-                <button id="play-btn">Play</button> 
+                <img class="home-display-img" src="assets/images/home-display.png" alt="Earth cartoon character">
+                <h2>Welcome aboard!</h2>
+                <h3>You are about to go on a world tour!</h3>
+                <p class="instruction-paragraph">You will be shown world famous landmarks and your job will be to correctly identify the country of the landmark.</p>
+                <p class="instruction-paragraph">You will be given 4 choices and 10 seconds to make your choice! A correct answer will turn green and an incorrect answer will turn red.</p>
+                <p class="instruction-paragraph">So fasten your seatbelt and lets start the tour!</p>
+                <button id="start-btn">Start Tour</button> 
             </div>
             <!--game container-->
             <div id="game-container" class="hide">
-                <h3 id="question-number"></h3>
-                <p>Time left:<span id="time-left">10</span></p>
+                <h2 id="landmark-number"></h2>
+                <h3>Time left:<span id="time-left">10 seconds</span></h3>
                 <img id="image" class="" src="" alt="">
                 <div id="choices">
                     <button class="choice" id="choice-a"></button>
