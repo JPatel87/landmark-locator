@@ -141,6 +141,13 @@ footer > p {
     min-height: 200px;
 }
 
+#score-image {
+    flex: 0.2;
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+} 
+
 #score-container > h2{
     text-align: center;
     color: #274472;

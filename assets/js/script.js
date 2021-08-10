@@ -10,6 +10,7 @@ const homeButton = document.getElementById('home-btn').addEventListener('click',
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmark = document.getElementById('image');
+const scoreImage = document.getElementById('score-image')
 const choiceA = document.getElementById('choice-a');
 const choiceB = document.getElementById('choice-b');
 const choiceC = document.getElementById('choice-c');
@@ -31,7 +32,7 @@ const questionNumber = document.getElementById('question-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-let maxQuestions = 3;
+let maxQuestions = 2;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
@@ -137,12 +138,29 @@ function nextQuestion() {
 function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
-    let summary = (numberAnswersCorrect <=5) ? "Lets tour again and improve this score":
-                  (numberAnswersCorrect <=10) ? "Fair effort, perhaps a re-tour may jog your memory?":
-                  (numberAnswersCorrect <=15) ? "Good effort, only a few errors, why not re-tour?":
-                  (numberAnswersCorrect <=19) ? "Great effort, almost perfection" : "Superb effort, your Geography is perfect!"
-    finalScore.innerHTML = `You scored ${numberAnswersCorrect} out of 20`;
-    scoreFeedback.innerHTML = `${summary}`;
+    let summaryText = (numberAnswersCorrect <=5) ? 'Lets tour again and improve this score':
+                  (numberAnswersCorrect <=10) ? 'Fair effort, perhaps another tour may jog your memory?':
+                  (numberAnswersCorrect <=15) ? 'Good effort, only a few errors, tour again?':
+                  (numberAnswersCorrect <=19) ? 'Great effort, almost perfection' : 'Superb effort, your Geography is perfect!'
+                  finalScore.innerHTML = `You scored ${numberAnswersCorrect} out of 20`;
+    scoreFeedback.innerHTML = `${summaryText}`;
+    scoreImage;
+    switch (summaryText) {
+        case 'Lets tour again and improve this score':
+            scoreImage.src = 'assets/images/low-score.png'
+            break;
+        case 'Fair effort, perhaps another tour may jog your memory?':
+            scoreImage.src = 'assets/images/average-score.png'
+            break;
+        case 'Good effort, only a few errors, tour again?':
+            scoreImage.src = 'assets/images/high-score.png'
+            break;
+        case 'Great effort, almost perfection':
+            scoreImage.src = 'assets/images/very-high-score.png'
+            break;
+        default: 
+            scoreImage.src = 'assets/images/perfect-score.png';
+    }
 }
 
 //restart game
