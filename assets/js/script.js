@@ -36,15 +36,17 @@ let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
 let timeLeftDisplay = document.getElementById('time-left')
-
 let timeLeft = 10
 let timer;
+let endGame;
 
 //startGame
 function startGame() {
     instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
+    endGame = false;
     setQuestion();
+    timeLeft = 10;
     countDown();
     currentQuestionDisplay() 
 }
@@ -60,14 +62,20 @@ function setQuestion() {
     choiceD.innerHTML = q.d;
 }
 
-//timer
+//countdown
 function countDown() {
     timer = setInterval(function(){
+        if (endGame) {
+            clearInterval(timer)
+            timeLeft = 10;
+        }
         if(timeLeft <=0) {
-            clearInterval(timeLeft)
-            nextQuestion()
-        } 
-        timeLeftDisplay.innerHTML = `${timeLeft} seconds`
+            if(!endGame) {
+                timeLeft = 10;
+            } 
+            nextQuestion();
+        }
+        timeLeftDisplay.innerHTML = `${timeLeft} second(s)`
         timeLeft -=1
     }, 1000)
 }
@@ -87,12 +95,14 @@ function buttonColor(choice) {
     } else {
     choiceSelect.classList.add('incorrect-choice');
     }
-    disableChoices()
-    timeOut = setTimeout(function() {
-        choiceColorReset(choiceSelect)
-    }, 1000);
+    disableChoices();
+    setTimeout(function() {
+        choiceColorReset(choiceSelect) 
+    }, 500); 
+        timeLeft = 0;   
 }
 
+//disable buttons once one button is clicked
 function disableChoices() {
     choiceA.setAttribute("disabled", "disabled");
     choiceB.setAttribute("disabled", "disabled");
@@ -100,6 +110,7 @@ function disableChoices() {
     choiceD.setAttribute("disabled", "disabled");
 }
 
+// remove previous choice button settings once a choice has been selected
 function choiceColorReset(choiceSelect) {
     choiceSelect.classList.remove('correct-choice');
     choiceSelect.classList.remove('incorrect-choice');
@@ -107,24 +118,22 @@ function choiceColorReset(choiceSelect) {
     choiceB.removeAttribute("disabled");
     choiceC.removeAttribute("disabled");
     choiceD.removeAttribute("disabled");
-    nextQuestion();
 }
 
 //set next question
 function nextQuestion() {
-    clearInterval(timer);
-    timeLeft = 10;
-    countDown();
     currentQuestion++;
     currentQuestionActual++;
     if (currentQuestionActual <= maxQuestions) {
         currentQuestionDisplay();
         setQuestion();
     } else {
+        endGame = true;
         endGameSummary()
     }
 }
 
+//display end game summary
 function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
@@ -136,28 +145,22 @@ function endGameSummary() {
     scoreFeedback.innerHTML = `${summary}`;
 }
 
-//restart Game
+//restart game
 function restartGame() {
     scoreContainer.classList.add('hide')
-    instructionContainer.style.display = 'none';
-    gameContainer.classList.remove('hide');
     currentQuestionActual = 1
-    currentQuestionDisplay()
     currentQuestion = 0;
     numberAnswersCorrect = 0;
-    setQuestion();
-    clearInterval(timer);
-    countDown()
+    endGame = false;
+    startGame()
 };
 
-//home display
+//go to home display
 function homeDisplay() {
-    instructionContainer.style.display = 'flex'
     scoreContainer.classList.add('hide');
+    play;
+    instructionContainer.style.display = 'flex';
     currentQuestionActual = 1
-    currentQuestionDisplay()
     currentQuestion = 0;
     numberAnswersCorrect = 0;
-    setQuestion();
-    clearInterval(timer);
 };
