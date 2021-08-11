@@ -45,7 +45,7 @@ body {
 
 .paragraph {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #274472;
 }
 
@@ -251,7 +251,7 @@ button[disabled] {
     } 
     
     #instruction-container {
-        width: 90%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto; 
     }
@@ -274,7 +274,7 @@ button[disabled] {
     } 
     
     .home-display-img {
-        width: 30vw;
+        width: 20vw;
     }
    
     #choices {
