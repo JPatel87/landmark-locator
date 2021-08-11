@@ -6,7 +6,7 @@
     margin: 1vw;
     padding: 0;
     border: none;
-    font-family: Bubblegum Sans, fantasy;
+    font-family: "Bubblegum Sans", fantasy;
 }
 
 body{
@@ -89,7 +89,7 @@ footer > p {
 }
 
 #start-btn,
-#play-again-btn, 
+#tour-again-btn, 
 #home-btn {
     flex: 0.1;
     background-color: #274472;
@@ -126,18 +126,12 @@ footer > p {
     text-align: center;
     font-size: 1.5rem;
     color: #18A558;
-};
-
-#game-container > p {
-    text-align: center;
-    color: #274472;
 }
 
 #landmark-image {
     width: 80%;
-    height: auto;
     border-radius: 8px;
-} 
+}
 
 .choice {
     font-size: 1.3rem;
@@ -162,12 +156,6 @@ footer > p {
     height: auto;
     border-radius: 8px;
 } 
-
-#score-container > h2{
-    text-align: center;
-    color: #274472;
-    flex: 0.1;
-}
 
 #score-container > p{
     text-align: center;

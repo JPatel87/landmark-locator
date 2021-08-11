@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 //Variable declarations
-const play = document.getElementById('start-btn').addEventListener('click', startGame);
-const playAgain = document.getElementById('play-again-btn').addEventListener('click', restartGame);
+const start = document.getElementById('start-btn').addEventListener('click', startGame);
+const tourAgain = document.getElementById('tour-again-btn').addEventListener('click', restartGame);
 const homeButton = document.getElementById('home-btn').addEventListener('click', homeDisplay);
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
@@ -32,7 +32,7 @@ const landmarkNumber = document.getElementById('landmark-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-let maxQuestions = 20;
+let maxQuestions = 2;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
@@ -142,7 +142,7 @@ function endGameSummary() {
                   (numberAnswersCorrect <=10) ? 'Fair effort, perhaps another tour may jog your memory?':
                   (numberAnswersCorrect <=15) ? 'Good effort, only a few errors, tour again?':
                   (numberAnswersCorrect <=19) ? 'Great effort, almost perfection' : 'Superb effort, your Geography is perfect!'
-                  finalScore.innerHTML = `You scored ${numberAnswersCorrect} out of 20`;
+                  finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmark's correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
     scoreImage;
     switch (summaryText) {
@@ -181,7 +181,7 @@ function restartGame() {
 //go to home display
 function homeDisplay() {
     scoreContainer.classList.add('hide');
-    play;
+    start;
     instructionContainer.style.display = 'flex';
     currentQuestionActual = 1
     currentQuestion = 0;
