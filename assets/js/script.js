@@ -29,10 +29,10 @@ const choiceDSelect = document.getElementById('choice-d').addEventListener('clic
     buttonColor('choice-d')
 });
 const landmarkNumber = document.getElementById('landmark-number');
-const lastQuestion = questions.length - 1;
-let currentQuestion = 0;
-let currentQuestionActual = 1;
-let maxQuestions = 2;
+const lastLandmark = landmarks.length - 1;
+let currentLandmark = 0;
+let currentLandmarkActual = 1;
+let maxLandmarks = 20;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
@@ -46,15 +46,15 @@ function startGame() {
     instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
     endGame = false;
-    setQuestion();
+    setLandmark();
     timeLeft = 10;
     countDown();
-    currentQuestionDisplay() 
+    currentLandmarkDisplay() 
 }
 
-//set question
-function setQuestion() {
-    let q = questions[currentQuestion];
+//set landmark
+function setLandmark() {
+    let q = landmarks[currentLandmark];
     landmarkImg.src = q.image;
     landmarkImg.alt = q.alt;
     choiceA.innerHTML = q.a;
@@ -74,22 +74,22 @@ function countDown() {
             if(!endGame) {
                 timeLeft = 10;
             } 
-            nextQuestion();
+            nextLandmark();
         }
         timeLeftDisplay.innerHTML = `${timeLeft} seconds`
         timeLeft -=1
     }, 1000)
 }
 
-//set question display
-function currentQuestionDisplay() {
-    landmarkNumber.innerHTML = `Landmark ${currentQuestionActual} of ${maxQuestions}`
+//set landmark display
+function currentLandmarkDisplay() {
+    landmarkNumber.innerHTML = `Landmark ${currentLandmarkActual} of ${maxLandmarks}`
 }
 
 //change button color once clicked
 function buttonColor(choice) {
     const choiceSelect = document.getElementById(choice)
-    if (choiceSelect.innerHTML === questions[currentQuestion].correct) {
+    if (choiceSelect.innerHTML === landmarks[currentLandmark].correct) {
     choiceSelect.classList.add('correct-choice');
     numberAnswersCorrect++
     console.log(numberAnswersCorrect)
@@ -121,13 +121,13 @@ function choiceColorReset(choiceSelect) {
     choiceD.removeAttribute("disabled");
 }
 
-//set next question
-function nextQuestion() {
-    currentQuestion++;
-    currentQuestionActual++;
-    if (currentQuestionActual <= maxQuestions) {
-        currentQuestionDisplay();
-        setQuestion();
+//set next landmark
+function nextLandmark() {
+    currentLandmark++;
+    currentLandmarkActual++;
+    if (currentLandmarkActual <= maxLandmarks) {
+        currentLandmarkDisplay();
+        setLandmark();
     } else {
         endGame = true;
         endGameSummary()
@@ -139,9 +139,9 @@ function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
     let summaryText = (numberAnswersCorrect <=5) ? 'Nevermind, why not tour again and see if you can do better?':
-                  (numberAnswersCorrect <=10) ? 'Almost half way there, tour again lets see if you can do better!':
+                  (numberAnswersCorrect <=10) ? 'Almost half way there, tour again and lets see if you can do better!':
                   (numberAnswersCorrect <=15) ? 'Good effort, only a few errors, tour again?':
-                  (numberAnswersCorrect <=19) ? 'Great effort, almost perfection' : 'Superb effort, your Geography is perfect!'
+                  (numberAnswersCorrect <=19) ? 'Great effort, almost perfection, tour again and see if you can get them all correct!' : 'Superb effort, your Geography is perfect!'
                   finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmarks correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
     scoreImage;
@@ -171,8 +171,8 @@ function endGameSummary() {
 //restart game
 function restartGame() {
     scoreContainer.classList.add('hide')
-    currentQuestionActual = 1
-    currentQuestion = 0;
+    currentLandmarkActual = 1
+    currentLandmark = 0;
     numberAnswersCorrect = 0;
     endGame = false;
     startGame()
@@ -183,7 +183,7 @@ function homeDisplay() {
     scoreContainer.classList.add('hide');
     start;
     instructionContainer.style.display = 'flex';
-    currentQuestionActual = 1
-    currentQuestion = 0;
+    currentLandmarkActual = 1
+    currentLandmark = 0;
     numberAnswersCorrect = 0;
 };

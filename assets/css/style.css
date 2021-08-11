@@ -197,9 +197,6 @@ button[disabled] {
 
 /*Media queries for min-screen size 700px*/
 @media screen and (min-width:700px) {
-    body {
-        background-color:black;
-    }
     .heading-one {
         font-size: 3.5rem;
     } 
@@ -247,9 +244,6 @@ button[disabled] {
 
 /*Media queries for min-screen size 900px*/
 @media screen and (min-width:900px) {
-    body {
-        background-color: purple;
-    }
     .heading-one {
         font-size: 3rem;
     } 

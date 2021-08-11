@@ -1,4 +1,4 @@
-let questions = [
+let landmarks = [
     {
         image: "assets/images/india.jpeg",
         alt: "Taj Mahal",
