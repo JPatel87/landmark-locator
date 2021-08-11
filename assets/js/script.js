@@ -20,7 +20,7 @@ const timeLeftDisplay = document.getElementById('time-left');
 //Let declarations
 let currentLandmark = 0;
 let currentLandmarkActual = 1;
-let maxLandmarks = 2;
+let maxLandmarks = 20;
 let numberAnswersCorrect = 0;
 let timeLeft = 10;
 let timer;
@@ -141,8 +141,8 @@ function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
     let summaryText = (numberAnswersCorrect <=5) ? 'Nevermind, why not tour again and see if you can do better?':
-                  (numberAnswersCorrect <=10) ? 'Almost half way there, tour again and lets see if you can do better!':
-                  (numberAnswersCorrect <=15) ? 'Good effort, only a few errors, tour again?':
+                  (numberAnswersCorrect <=9) ? 'Good attempt, there is room for improvement, tour again and lets see if you can do better!':
+                  (numberAnswersCorrect <=15) ? 'Well done! You got at least half of the landmarks correct, only a few errors, tour again?':
                   (numberAnswersCorrect <=19) ? 'Great effort, almost perfection, tour again and see if you can get them all correct!' : 'Superb effort, your Geography is perfect!';
                   finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmarks correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
@@ -152,11 +152,11 @@ function endGameSummary() {
             scoreImage.src = 'assets/images/low-score.png';
             scoreImage.alt = 'emoji for low score';
             break;
-        case 'Almost half way there, tour again and lets see if you can do better!':
+        case 'Good attempt, there is room for improvement, tour again and lets see if you can do better!':
             scoreImage.src = 'assets/images/average-score.png';
             scoreImage.alt = 'emoji for average score';
             break;
-        case 'Good effort, only a few errors, tour again?':
+        case 'Well done! You got at least half of the landmarks correct, only a few errors, tour again?':
             scoreImage.src = 'assets/images/high-score.png';
             scoreImage.alt = 'emoji for high score';
             break;

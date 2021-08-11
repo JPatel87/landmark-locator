@@ -111,7 +111,7 @@ let landmarks = [
         image: "assets/images/japan.jpeg",
         alt: "Mount Fuji",
         a: "China",
-        b: "Philippenes",
+        b: "Philippines",
         c: "Morroco",
         d: "Japan",
         correct: "Japan"
