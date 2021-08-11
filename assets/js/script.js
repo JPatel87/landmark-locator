@@ -138,19 +138,19 @@ function nextQuestion() {
 function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
-    let summaryText = (numberAnswersCorrect <=5) ? 'Lets tour again and improve this score':
-                  (numberAnswersCorrect <=10) ? 'Fair effort, perhaps another tour may jog your memory?':
+    let summaryText = (numberAnswersCorrect <=5) ? 'Nevermind, why not tour again and see if you can do better?':
+                  (numberAnswersCorrect <=10) ? 'Almost half way there, tour again lets see if you can do better!':
                   (numberAnswersCorrect <=15) ? 'Good effort, only a few errors, tour again?':
                   (numberAnswersCorrect <=19) ? 'Great effort, almost perfection' : 'Superb effort, your Geography is perfect!'
                   finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmark's correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
     scoreImage;
     switch (summaryText) {
-        case 'Lets tour again and improve this score':
+        case 'Nevermind, why not tour again and see if you can do better?':
             scoreImage.src = 'assets/images/low-score.png'
             scoreImage.alt = 'emoji for low score'
             break;
-        case 'Fair effort, perhaps another tour may jog your memory?':
+        case 'Almost half way there, tour again lets see if you can do better!':
             scoreImage.src = 'assets/images/average-score.png'
             scoreImage.alt = 'emoji for average score'
             break;
