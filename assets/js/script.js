@@ -4,34 +4,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 //Variable declarations
-const start = document.getElementById('start-btn').addEventListener('click', startGame);
-const tourAgain = document.getElementById('tour-again-btn').addEventListener('click', restartGame);
-const homeButton = document.getElementById('home-btn').addEventListener('click', homeDisplay);
+document.getElementById('start-btn').addEventListener('click', startGame);
+document.getElementById('tour-again-btn').addEventListener('click', restartGame);
+document.getElementById('home-btn').addEventListener('click', homeDisplay);
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmarkImg = document.getElementById('landmark-image');
-const scoreImage = document.getElementById('score-image');
 const choiceA = document.getElementById('choice-a');
 const choiceB = document.getElementById('choice-b');
 const choiceC = document.getElementById('choice-c');
 const choiceD = document.getElementById('choice-d');
 const scoreContainer = document.getElementById('score-container');
-const choiceASelect = document.getElementById('choice-a').addEventListener('click', function() {
+document.getElementById('choice-a').addEventListener('click', function() {
     buttonColor('choice-a');
 });
-const choiceBSelect = document.getElementById('choice-b').addEventListener('click', function() {
+document.getElementById('choice-b').addEventListener('click', function() {
     buttonColor('choice-b');
 });
-const choiceCSelect = document.getElementById('choice-c').addEventListener('click', function() {
+document.getElementById('choice-c').addEventListener('click', function() {
     buttonColor('choice-c');
 });
-const choiceDSelect = document.getElementById('choice-d').addEventListener('click', function() {
+document.getElementById('choice-d').addEventListener('click', function() {
     buttonColor('choice-d');
 });
 const landmarkNumber = document.getElementById('landmark-number');
 let currentLandmark = 0;
 let currentLandmarkActual = 1;
-let maxLandmarks = 20;
+let maxLandmarks = 2;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback');
@@ -143,7 +142,7 @@ function endGameSummary() {
                   (numberAnswersCorrect <=19) ? 'Great effort, almost perfection, tour again and see if you can get them all correct!' : 'Superb effort, your Geography is perfect!';
                   finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmarks correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
-    scoreImage;
+    const scoreImage = document.getElementById('score-image');
     switch (summaryText) {
         case 'Nevermind, why not tour again and see if you can do better?':
             scoreImage.src = 'assets/images/low-score.png';
@@ -180,7 +179,7 @@ function restartGame() {
 //go to home display
 function homeDisplay() {
     scoreContainer.classList.add('hide');
-    start;
+    document.getElementById('start-btn').addEventListener('click', startGame);
     instructionContainer.style.display = 'flex';
     currentLandmarkActual = 1;
     currentLandmark = 0;
