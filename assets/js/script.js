@@ -9,7 +9,7 @@ const playAgain = document.getElementById('play-again-btn').addEventListener('cl
 const homeButton = document.getElementById('home-btn').addEventListener('click', homeDisplay);
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
-const landmark = document.getElementById('image');
+const landmarkImg = document.getElementById('landmark-image');
 const scoreImage = document.getElementById('score-image')
 const choiceA = document.getElementById('choice-a');
 const choiceB = document.getElementById('choice-b');
@@ -32,7 +32,7 @@ const landmarkNumber = document.getElementById('landmark-number');
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let currentQuestionActual = 1;
-let maxQuestions = 2;
+let maxQuestions = 20;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
 let scoreFeedback = document.getElementById('score-feedback')
@@ -55,8 +55,8 @@ function startGame() {
 //set question
 function setQuestion() {
     let q = questions[currentQuestion];
-    landmark.src = q.image;
-    landmark.alt = q.alt;
+    landmarkImg.src = q.image;
+    landmarkImg.alt = q.alt;
     choiceA.innerHTML = q.a;
     choiceB.innerHTML = q.b;
     choiceC.innerHTML = q.c;

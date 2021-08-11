@@ -83,7 +83,6 @@ footer > p {
     align-items: center;
     background-color: #C3E0E5;
     border-radius: 8px;
-    min-height: 80vh;
     width: 95%;
     margin-left: auto;
     margin-right: auto; 
@@ -119,46 +118,37 @@ footer > p {
 }
 
 /*Game-container styles*/
-#landmark-number {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #18A558;
-    flex: 0.1;
-}
-
-game-container > h3 {
-    text-align: center;
-    font-size: 1.3rem;
-    color: #274472;
-    flex: 0.1;
-}
-
 #game-container {
     min-height: 300px;
 }
 
+#landmark-number {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #18A558;
+};
+
 #game-container > p {
     text-align: center;
     color: #274472;
-    flex: 0.1;
 }
 
-#image {
-    flex: 0.2;
+#landmark-image {
     width: 80%;
     height: auto;
     border-radius: 8px;
 } 
 
 .choice {
-    flex: 1;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border-radius: 8px;
     background-color: #274472;
     color: #C3E0E5;
     cursor: pointer;
-    width: 100%;
+    width: 85%;
     text-decoration: none;
+    margin: 1vh;
+    padding: 1.5vw;
 }
 
 /*Score-container styles*/
