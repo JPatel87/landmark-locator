@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,14 @@
     <meta name="description" content="Game to identify the country of a landmark">
     <meta name="keywords" content="game, landmark, world, country">
     <!--Font awesome, Google fonts and CSS style sheet-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <!--css style sheet-->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Locate the Landmark</title>
 </head>
+
 <body>
     <div class="body-container">
         <!--header-->
@@ -26,10 +29,12 @@
                 <img class="home-display-img" src="assets/images/home-display.png" alt="Earth cartoon character">
                 <h2 class="heading-two">Welcome aboard!</h2>
                 <h3 class="heading-three">You are about to go on a world tour!</h3>
-                <p class="paragraph">You will be shown world famous landmarks and your job will be to correctly identify the country of the landmark.</p>
-                <p class="paragraph">You will be given 4 choices and 10 seconds to make your choice! A correct answer will turn green and an incorrect answer will turn red.</p>
+                <p class="paragraph">You will be shown world famous landmarks and your job will be to correctly identify
+                    the country of the landmark.</p>
+                <p class="paragraph">You will be given 4 choices and 10 seconds to make your choice! A correct answer
+                    will turn green and an incorrect answer will turn red.</p>
                 <p class="paragraph">So fasten your seatbelt and lets start the tour!</p>
-                <button id="start-btn">Start Tour</button> 
+                <button id="start-btn">Start Tour</button>
             </div>
             <!--game container-->
             <div id="game-container" class="hide">
@@ -38,7 +43,7 @@
                 <img id="landmark-image" src="assets/images/india.jpeg" alt="Taj Mahal">
                 <div id="choices">
                     <button class="choice" id="choice-a"></button>
-                    <button class="choice" id ="choice-b"></button>
+                    <button class="choice" id="choice-b"></button>
                     <button class="choice" id="choice-c"></button>
                     <button class="choice" id="choice-d"></button>
                 </div>
@@ -46,11 +51,11 @@
             <!--score container-->
             <div id="score-container" class="hide">
                 <h2 class="heading-two">You've completed the tour!</h2>
-                <p class="paragraph" id="final-score"></p> 
+                <p class="paragraph" id="final-score"></p>
                 <p class="paragraph" id="score-feedback"></p>
                 <img id="score-image" src="assets/images/perfect-score.png" alt="Perfect score image">
-                <button id='tour-again-btn'>Tour again</button>   
-                <button id='home-btn'>Home</button>   
+                <button id='tour-again-btn'>Tour again</button>
+                <button id='home-btn'>Home</button>
             </div>
         </div>
         <!--footer-->
@@ -62,5 +67,5 @@
         <script src="assets/js/script.js"></script>
     </div>
 </body>
+
 </html>
-  

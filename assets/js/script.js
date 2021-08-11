@@ -142,7 +142,7 @@ function endGameSummary() {
                   (numberAnswersCorrect <=10) ? 'Almost half way there, tour again lets see if you can do better!':
                   (numberAnswersCorrect <=15) ? 'Good effort, only a few errors, tour again?':
                   (numberAnswersCorrect <=19) ? 'Great effort, almost perfection' : 'Superb effort, your Geography is perfect!'
-                  finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmark's correct`;
+                  finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmarks correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
     scoreImage;
     switch (summaryText) {
