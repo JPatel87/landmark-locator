@@ -10,34 +10,33 @@ const homeButton = document.getElementById('home-btn').addEventListener('click',
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmarkImg = document.getElementById('landmark-image');
-const scoreImage = document.getElementById('score-image')
+const scoreImage = document.getElementById('score-image');
 const choiceA = document.getElementById('choice-a');
 const choiceB = document.getElementById('choice-b');
 const choiceC = document.getElementById('choice-c');
 const choiceD = document.getElementById('choice-d');
-const scoreContainer = document.getElementById('score-container')
+const scoreContainer = document.getElementById('score-container');
 const choiceASelect = document.getElementById('choice-a').addEventListener('click', function() {
-    buttonColor('choice-a')
+    buttonColor('choice-a');
 });
 const choiceBSelect = document.getElementById('choice-b').addEventListener('click', function() {
-    buttonColor('choice-b')
+    buttonColor('choice-b');
 });
 const choiceCSelect = document.getElementById('choice-c').addEventListener('click', function() {
-    buttonColor('choice-c')
+    buttonColor('choice-c');
 });
 const choiceDSelect = document.getElementById('choice-d').addEventListener('click', function() {
-    buttonColor('choice-d')
+    buttonColor('choice-d');
 });
 const landmarkNumber = document.getElementById('landmark-number');
-const lastLandmark = landmarks.length - 1;
 let currentLandmark = 0;
 let currentLandmarkActual = 1;
 let maxLandmarks = 20;
 let numberAnswersCorrect = 0;
 let finalScore = document.getElementById('final-score');
-let scoreFeedback = document.getElementById('score-feedback')
-let timeLeftDisplay = document.getElementById('time-left')
-let timeLeft = 10
+let scoreFeedback = document.getElementById('score-feedback');
+let timeLeftDisplay = document.getElementById('time-left');
+let timeLeft = 10;
 let timer;
 let endGame;
 
@@ -49,7 +48,7 @@ function startGame() {
     setLandmark();
     timeLeft = 10;
     countDown();
-    currentLandmarkDisplay() 
+    currentLandmarkDisplay();
 }
 
 //set landmark
@@ -67,7 +66,7 @@ function setLandmark() {
 function countDown() {
     timer = setInterval(function(){
         if (endGame) {
-            clearInterval(timer)
+            clearInterval(timer);
             timeLeft = 10;
         }
         if(timeLeft <=0) {
@@ -76,29 +75,29 @@ function countDown() {
             } 
             nextLandmark();
         }
-        timeLeftDisplay.innerHTML = `${timeLeft} seconds`
-        timeLeft -=1
-    }, 1000)
+        timeLeftDisplay.innerHTML = `${timeLeft} seconds`;
+        timeLeft -=1;
+    }, 1000);
 }
 
 //set landmark display
 function currentLandmarkDisplay() {
-    landmarkNumber.innerHTML = `Landmark ${currentLandmarkActual} of ${maxLandmarks}`
+    landmarkNumber.innerHTML = `Landmark ${currentLandmarkActual} of ${maxLandmarks}`;
 }
 
 //change button color once clicked
 function buttonColor(choice) {
-    const choiceSelect = document.getElementById(choice)
+    const choiceSelect = document.getElementById(choice);
     if (choiceSelect.innerHTML === landmarks[currentLandmark].correct) {
     choiceSelect.classList.add('correct-choice');
-    numberAnswersCorrect++
-    console.log(numberAnswersCorrect)
+    numberAnswersCorrect++;
+    console.log(numberAnswersCorrect);
     } else {
     choiceSelect.classList.add('incorrect-choice');
     }
     disableChoices();
     setTimeout(function() {
-        choiceColorReset(choiceSelect) 
+        choiceColorReset(choiceSelect) ;
     }, 500); 
         timeLeft = 0;   
 }
@@ -115,7 +114,7 @@ function disableChoices() {
 function choiceColorReset(choiceSelect) {
     choiceSelect.classList.remove('correct-choice');
     choiceSelect.classList.remove('incorrect-choice');
-    choiceA.removeAttribute("disabled")
+    choiceA.removeAttribute("disabled");
     choiceB.removeAttribute("disabled");
     choiceC.removeAttribute("disabled");
     choiceD.removeAttribute("disabled");
@@ -130,7 +129,7 @@ function nextLandmark() {
         setLandmark();
     } else {
         endGame = true;
-        endGameSummary()
+        endGameSummary();
     }
 }
 
@@ -141,49 +140,49 @@ function endGameSummary() {
     let summaryText = (numberAnswersCorrect <=5) ? 'Nevermind, why not tour again and see if you can do better?':
                   (numberAnswersCorrect <=10) ? 'Almost half way there, tour again and lets see if you can do better!':
                   (numberAnswersCorrect <=15) ? 'Good effort, only a few errors, tour again?':
-                  (numberAnswersCorrect <=19) ? 'Great effort, almost perfection, tour again and see if you can get them all correct!' : 'Superb effort, your Geography is perfect!'
+                  (numberAnswersCorrect <=19) ? 'Great effort, almost perfection, tour again and see if you can get them all correct!' : 'Superb effort, your Geography is perfect!';
                   finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmarks correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
     scoreImage;
     switch (summaryText) {
         case 'Nevermind, why not tour again and see if you can do better?':
-            scoreImage.src = 'assets/images/low-score.png'
-            scoreImage.alt = 'emoji for low score'
+            scoreImage.src = 'assets/images/low-score.png';
+            scoreImage.alt = 'emoji for low score';
             break;
-        case 'Almost half way there, tour again lets see if you can do better!':
-            scoreImage.src = 'assets/images/average-score.png'
-            scoreImage.alt = 'emoji for average score'
+        case 'Almost half way there, tour again and lets see if you can do better!':
+            scoreImage.src = 'assets/images/average-score.png';
+            scoreImage.alt = 'emoji for average score';
             break;
         case 'Good effort, only a few errors, tour again?':
-            scoreImage.src = 'assets/images/high-score.png'
-            scoreImage.alt = 'emoji for high score'
+            scoreImage.src = 'assets/images/high-score.png';
+            scoreImage.alt = 'emoji for high score';
             break;
-        case 'Great effort, almost perfection':
-            scoreImage.src = 'assets/images/very-high-score.png'
-            scoreImage.alt = 'emoji for very high score'
+        case 'Great effort, almost perfection, tour again and see if you can get them all correct!':
+            scoreImage.src = 'assets/images/very-high-score.png';
+            scoreImage.alt = 'emoji for very high score';
             break;
         default: 
             scoreImage.src = 'assets/images/perfect-score.png';
-            scoreImage.alt = 'emoji for perfect score'
+            scoreImage.alt = 'emoji for perfect score';
     }
 }
 
 //restart game
 function restartGame() {
-    scoreContainer.classList.add('hide')
-    currentLandmarkActual = 1
+    scoreContainer.classList.add('hide');
+    currentLandmarkActual = 1;
     currentLandmark = 0;
     numberAnswersCorrect = 0;
     endGame = false;
-    startGame()
-};
+    startGame();
+}
 
 //go to home display
 function homeDisplay() {
     scoreContainer.classList.add('hide');
     start;
     instructionContainer.style.display = 'flex';
-    currentLandmarkActual = 1
+    currentLandmarkActual = 1;
     currentLandmark = 0;
     numberAnswersCorrect = 0;
-};
+}
