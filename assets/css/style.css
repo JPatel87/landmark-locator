@@ -20,6 +20,9 @@ body {
     overflow: auto;
     padding-bottom: 2vh;
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .heading-one {
@@ -42,14 +45,14 @@ body {
 
 .paragraph {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #274472;
 }
 
 #start-btn,
 #tour-again-btn, 
 #home-btn, 
-.choice {
+.choice-btn {
     font-size: 1.5rem;
     border-radius: 8px;
     background-color: #274472;
@@ -78,7 +81,7 @@ body {
     align-items: center;
     background-color: #C3E0E5;
     border-radius: 8px;
-    width: 95%;
+    width: 97%;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -88,8 +91,12 @@ header {
     display: flex;
     justify-content: center;
     align-content: center;
-    align-items: center;
-    min-height: 10vw;
+    align-items: flex-start;
+    min-height: 5vw;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 8px;
 }
 
 i {
@@ -99,7 +106,7 @@ i {
 
 /*Instruction-container style*/
 #instruction-container {
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 .home-display-img {
@@ -169,7 +176,7 @@ button[disabled] {
     opacity: 0.6;
 }
 
-/*Media queries for min-screen size 800px*/
+/*Media queries for min-screen size 700px*/
 @media screen and (min-width:700px) {
     body {
         background-color:black;
@@ -194,6 +201,10 @@ button[disabled] {
         font-size: 3.5rem;
     } 
 
+    .home-display-img {
+        width: 30vw;
+    }
+
     #start-btn,
     #tour-again-btn, 
     #home-btn
@@ -202,7 +213,7 @@ button[disabled] {
         margin-bottom: 2vh;
     }
 
-    .choice {
+    .choice-btn {
         font-size: 2.3rem;
     } 
     
@@ -212,4 +223,79 @@ button[disabled] {
 
     .footer-paragraph {
         font-size: 1.5rem;       
+}
+
+/*Media queries for min-screen size 900px*/
+@media screen and (min-width:900px) {
+    body {
+        background-color: purple;
+    }
+    .heading-one {
+        font-size: 4rem;
+    } 
+    
+    .heading-two {
+        font-size: 3rem;
+    }
+    
+    .heading-three {
+        font-size: 2.5rem;
+    }
+    
+    .paragraph {
+        font-size: 2.2rem;
+    }
+    
+    i {
+        font-size: 4rem;
+    } 
+    
+    #instruction-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+
+    .score-container-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+    }
+
+    #start-btn,
+    #tour-again-btn, 
+    #home-btn
+    {
+        font-size: 2rem;
+        margin-bottom: 2vh;
+        width: 20vw;
+    } 
+    
+    .home-display-img {
+        width: 30vw;
+    }
+   
+    #choices {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #landmark-image {
+        width: 40%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .choice-btn {
+        font-size: 2rem;
+    } 
+    
+    #score-image {
+        width: 40vw;
+    }
+
+    .footer-paragraph {
+        font-size: 1.8rem;       
 }
