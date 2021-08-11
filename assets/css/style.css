@@ -110,7 +110,9 @@ footer > p {
     height: auto;
 }
 
-#start-btn:hover {
+#start-btn:hover,
+#tour-again-btn:hover, 
+#home-btn:hover {
     background-color: #18A558;
 }
 
