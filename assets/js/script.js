@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 //Variable declarations
-document.getElementById('start-btn').addEventListener('click', startGame);
-document.getElementById('tour-again-btn').addEventListener('click', restartGame);
-document.getElementById('home-btn').addEventListener('click', homeDisplay);
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmarkImg = document.getElementById('landmark-image');
@@ -15,6 +12,22 @@ const choiceB = document.getElementById('choice-b');
 const choiceC = document.getElementById('choice-c');
 const choiceD = document.getElementById('choice-d');
 const scoreContainer = document.getElementById('score-container');
+const landmarkNumber = document.getElementById('landmark-number');
+let currentLandmark = 0;
+let currentLandmarkActual = 1;
+let maxLandmarks = 2;
+let numberAnswersCorrect = 0;
+let finalScore = document.getElementById('final-score');
+let scoreFeedback = document.getElementById('score-feedback');
+let timeLeftDisplay = document.getElementById('time-left');
+let timeLeft = 10;
+let timer;
+let endGame;
+
+//Event listeners
+document.getElementById('start-btn').addEventListener('click', startGame);
+document.getElementById('tour-again-btn').addEventListener('click', restartGame);
+document.getElementById('home-btn').addEventListener('click', homeDisplay);
 document.getElementById('choice-a').addEventListener('click', function() {
     buttonColor('choice-a');
 });
@@ -27,17 +40,6 @@ document.getElementById('choice-c').addEventListener('click', function() {
 document.getElementById('choice-d').addEventListener('click', function() {
     buttonColor('choice-d');
 });
-const landmarkNumber = document.getElementById('landmark-number');
-let currentLandmark = 0;
-let currentLandmarkActual = 1;
-let maxLandmarks = 2;
-let numberAnswersCorrect = 0;
-let finalScore = document.getElementById('final-score');
-let scoreFeedback = document.getElementById('score-feedback');
-let timeLeftDisplay = document.getElementById('time-left');
-let timeLeft = 10;
-let timer;
-let endGame;
 
 //startGame
 function startGame() {
