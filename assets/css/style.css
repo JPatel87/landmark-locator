@@ -101,7 +101,7 @@ header {
 
 i {
     color: #C3E0E5;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 /*Instruction-container style*/
@@ -110,7 +110,7 @@ i {
 }
 
 .home-display-img {
-    width: 40%;
+    width: 30vw;
     height: auto;
 }
 
@@ -144,7 +144,7 @@ i {
 }
 
 .footer-paragraph {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: #C3E0E5;
     text-align: center;
 }
