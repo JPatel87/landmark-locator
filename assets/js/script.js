@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log('DOM Content fully loaded');
 });
 
-//Variable declarations
+//Constant declarations
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmarkImg = document.getElementById('landmark-image');
@@ -13,13 +13,15 @@ const choiceC = document.getElementById('choice-c');
 const choiceD = document.getElementById('choice-d');
 const scoreContainer = document.getElementById('score-container');
 const landmarkNumber = document.getElementById('landmark-number');
+const finalScore = document.getElementById('final-score');
+const scoreFeedback = document.getElementById('score-feedback');
+const timeLeftDisplay = document.getElementById('time-left');
+
+//Let declarations
 let currentLandmark = 0;
 let currentLandmarkActual = 1;
 let maxLandmarks = 2;
 let numberAnswersCorrect = 0;
-let finalScore = document.getElementById('final-score');
-let scoreFeedback = document.getElementById('score-feedback');
-let timeLeftDisplay = document.getElementById('time-left');
 let timeLeft = 10;
 let timer;
 let endGame;
