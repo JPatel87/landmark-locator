@@ -33,32 +33,43 @@ body {
 
 .heading-two {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #18A558;
 }
 
 .heading-three {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #274472;
 }
 
 .paragraph {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #274472;
 }
 
-#start-btn,
-#tour-again-btn, 
-#home-btn, 
 .choice-btn {
     font-size: 1.5rem;
     border-radius: 8px;
     background-color: #274472;
     color: #C3E0E5;
     cursor: pointer;
-    width: 85%;
+    width: 80%;
+    text-decoration: none;
+    margin-bottom: 1vh;
+    padding: 1.5vw;
+}
+
+#start-btn,
+#home-btn,
+#tour-again-btn {
+    font-size: 1.5rem;
+    border-radius: 8px;
+    background-color: #274472;
+    color: #C3E0E5;
+    cursor: pointer;
+    width: 60%;
     text-decoration: none;
     margin-bottom: 1vh;
     padding: 1.5vw;
@@ -110,7 +121,7 @@ i {
 }
 
 .home-display-img {
-    width: 25vw;
+    width: 30vw;
 }
 
 /*Game-container styles*/
@@ -129,8 +140,17 @@ i {
     min-height: 70vh;
 }
 
+.score-container-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 70vw
+}
+
 #score-image {
-    width: 20vw;
+    width: 40vw;
 } 
 
 /*Footer styles*/
