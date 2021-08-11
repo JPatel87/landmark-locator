@@ -88,9 +88,8 @@ header {
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
     min-height: 10vw;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
 }
 
 i {
@@ -99,6 +98,10 @@ i {
 }
 
 /*Instruction-container style*/
+#instruction-container {
+    min-height: 80vh;
+}
+
 .home-display-img {
     width: 40%;
     height: auto;
@@ -106,13 +109,7 @@ i {
 
 /*Game-container styles*/
 #game-container {
-    max-height: 100vh;
-}
-
-#landmark-number {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #18A558;
+    min-height: 80vh;
 }
 
 #landmark-image {
@@ -122,7 +119,7 @@ i {
 
 /*Score-container styles*/
 #score-container {
-    max-height: 100vh;
+    min-height: 80vh;
 }
 
 #score-image {
@@ -140,7 +137,8 @@ i {
     clear: both;
 }
 
-footer > p {
+.footer-paragraph {
+    font-size: 1.2rem;
     color: #C3E0E5;
     text-align: center;
 }
@@ -170,4 +168,88 @@ footer > p {
 /*For javascript function disableChoices*/
 button[disabled] {
     opacity: 0.6;
+}
+
+/*Media queries for min-screen size 800px*/
+@media screen and (min-width:700px) {
+    body {
+        background-color:black;
+    }
+    .heading-one {
+        font-size: 3.5rem;
+    } 
+    
+    .heading-two {
+        font-size: 2.6rem;
+    }
+    
+    .heading-three {
+        font-size: 2.4rem;
+    }
+    
+    .paragraph {
+        font-size: 2rem;
+    }
+    
+    i {
+        font-size: 3.5rem;
+    } 
+
+    #start-btn,
+    #tour-again-btn, 
+    #home-btn
+    {
+        font-size: 2.2rem;
+        margin-bottom: 2vh;
+    }
+
+    .choice {
+        font-size: 2.3rem;
+        margin-bottom: 1.4vh;
+    }
+
+    .footer-paragraph {
+        font-size: 1.5rem;       
+}
+
+/*Media queries for min-screen size 900px*/
+@media screen and (min-width:900px) {
+    body {
+        background-color:purple;
+    }
+    .heading-one {
+        font-size: 3.5rem;
+    } 
+    
+    .heading-two {
+        font-size: 2.6rem;
+    }
+    
+    .heading-three {
+        font-size: 2.4rem;
+    }
+    
+    .paragraph {
+        font-size: 2rem;
+    }
+    
+    i {
+        font-size: 3.5rem;
+    } 
+
+    #start-btn,
+    #tour-again-btn, 
+    #home-btn
+    {
+        font-size: 2.2rem;
+        margin-bottom: 2vh;
+    }
+
+    .choice {
+        font-size: 2.3rem;
+        margin-bottom: 1.4vh;
+    }
+
+    .footer-paragraph {
+        font-size: 1.5rem;       
 }
