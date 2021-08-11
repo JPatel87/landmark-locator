@@ -30,19 +30,19 @@ body {
 
 .heading-two {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #18A558;
 }
 
 .heading-three {
     text-align: center;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
     color: #274472;
 }
 
 .paragraph {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #274472;
 }
 
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
     width: 85%;
     text-decoration: none;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
     padding: 1.5vw;
 }
 
@@ -109,24 +109,23 @@ i {
 
 /*Game-container styles*/
 #game-container {
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 #landmark-image {
     width: 80%;
+    height: auto;
     border-radius: 8px;
 }
 
 /*Score-container styles*/
 #score-container {
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 #score-image {
-    flex: 0.2;
     width: 60%;
     height: auto;
-    border-radius: 8px;
 } 
 
 /*Footer styles*/
@@ -205,49 +204,10 @@ button[disabled] {
 
     .choice {
         font-size: 2.3rem;
-        margin-bottom: 1.4vh;
-    }
-
-    .footer-paragraph {
-        font-size: 1.5rem;       
-}
-
-/*Media queries for min-screen size 900px*/
-@media screen and (min-width:900px) {
-    body {
-        background-color:purple;
-    }
-    .heading-one {
-        font-size: 3.5rem;
     } 
     
-    .heading-two {
-        font-size: 2.6rem;
-    }
-    
-    .heading-three {
-        font-size: 2.4rem;
-    }
-    
-    .paragraph {
-        font-size: 2rem;
-    }
-    
-    i {
-        font-size: 3.5rem;
-    } 
-
-    #start-btn,
-    #tour-again-btn, 
-    #home-btn
-    {
-        font-size: 2.2rem;
-        margin-bottom: 2vh;
-    }
-
-    .choice {
-        font-size: 2.3rem;
-        margin-bottom: 1.4vh;
+    #score-image {
+        width: 80%;
     }
 
     .footer-paragraph {
