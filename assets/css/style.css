@@ -27,13 +27,13 @@ body {
 
 .heading-one {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: #C3E0E5;
 }
 
 .heading-two {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #18A558;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .paragraph {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #274472;
 }
 
@@ -112,7 +112,7 @@ header {
 
 i {
     color: #C3E0E5;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 /*Instruction-container style*/
@@ -121,7 +121,7 @@ i {
 }
 
 .home-display-img {
-    width: 30vw;
+    width: 25vw;
 }
 
 /*Game-container styles*/
@@ -162,7 +162,7 @@ i {
 }
 
 .footer-paragraph {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #C3E0E5;
     text-align: center;
 }
@@ -249,23 +249,23 @@ button[disabled] {
         background-color: purple;
     }
     .heading-one {
-        font-size: 3.2rem;
+        font-size: 3rem;
     } 
     
     .heading-two {
-        font-size: 2.7rem;
+        font-size: 2.5rem;
     }
     
     .heading-three {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     
     .paragraph {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     i {
-        font-size: 3.2rem;
+        font-size: 3rem;
     } 
     
     #instruction-container {
