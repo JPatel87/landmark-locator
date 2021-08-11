@@ -19,7 +19,7 @@ body{
 
 .main-body-container {
     overflow: auto;
-    padding-bottom: 100px;
+    padding-bottom: 2vh;
     display: flex;
 }
 
@@ -61,9 +61,9 @@ header > h1 {
 
 /*Footer styles*/
 #footer {
-    height: 100px;
+    height: 1.5vh;
     position: relative;
-    margin-top: -100px;
+    margin-top: -2vh;
     clear: both;
 }
 
@@ -89,17 +89,18 @@ footer > p {
 }
 
 #start-btn,
+.choice,
 #tour-again-btn, 
 #home-btn {
-    flex: 0.1;
-    background-color: #274472;
-    border-radius: 8px;
-    color: #C3E0E5;
-    height: 30px;
-    font-weight: 700;
     font-size: 1.5rem;
+    border-radius: 8px;
+    background-color: #274472;
+    color: #C3E0E5;
     cursor: pointer;
-    width: 70vw;
+    width: 85%;
+    text-decoration: none;
+    margin-bottom: 2vh;
+    padding: 1.5vw;
 }
 
 /*Instruction-container styles*/
@@ -107,10 +108,6 @@ footer > p {
     flex: 0.2;
     width: 40%;
     height: auto;
-}
-
-#start-btn {
-    margin-bottom: 2.5vh;
 }
 
 #start-btn:hover {
@@ -133,21 +130,9 @@ footer > p {
     border-radius: 8px;
 }
 
-.choice {
-    font-size: 1.3rem;
-    border-radius: 8px;
-    background-color: #274472;
-    color: #C3E0E5;
-    cursor: pointer;
-    width: 85%;
-    text-decoration: none;
-    margin: 1vh;
-    padding: 1.5vw;
-}
-
 /*Score-container styles*/
 #score-container {
-    min-height: 200px;
+    min-height: 65vh;
 }
 
 #score-image {
@@ -156,12 +141,6 @@ footer > p {
     height: auto;
     border-radius: 8px;
 } 
-
-#score-container > p{
-    text-align: center;
-    color: #274472;
-    flex: 0.1;
-}
 
 /*Hide style*/
 #game-container.hide {
