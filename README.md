@@ -68,7 +68,7 @@ Home display, Game display, End-game display
 3. Header 
 * Consists of a logo and a heading
 * The logo used in the header is of a landmark icon which was sourced from [Font Awesome](https://fontawesome.com/).
-* This logo is also used as the favicon for this project. 
+* This logo is also used as the favicon for this project. It was converted to a favicon icon using [Gauger.io](https://gauger.io/fonticon/) and then referenced into the index html file by following instructions given on [javatpoint](https://www.javatpoint.com/html-favicon).
 * The objective of using this logo is to create a memorable image to enable users to remember the website by. It also projects an indication of the intent of the website.
 * The title of the project is simple, catchy and aims to effectively communicate out the intent of the website. 
 
@@ -117,7 +117,8 @@ If time permitted, I would have liked to:
 
 # Testing
 
-* The website has been reviewed on various devices such as laptops, ipads and iphones to ensure the media queries are running as expected. No issues reported.
+* The website has been reviewed on various devices such as laptops, ipads and iphones to ensure the media queries are running as expected (see responsive images at the start of this README file). No major issues reported.
+
 * The website has been tested by myself, my tutor and my husband to ensure that all the elements that the user will interact with or see are working as they should be, such as: 
   * favicon icon loads as it should.
   * images and text are appropriately sized.
@@ -142,6 +143,13 @@ If time permitted, I would have liked to:
   * end game summary statments show the
     correct number of questions and display the correct advice comment and image. 
 
+## Bugs
+
+1. Console error
+* The first bug that was encountered was when this project was first created, before the initial commit, I wanted to test if the console was logging messages before adding any code into the javascript file.
+* After adding a “commited” message into the console, the console did not show the message, however, it showed a ‘Failed to load resource: the server responded with a statis of 404 ()'.
+* I searched for answers on the internet however nothing worked. Messages that i came across on [Stack Overflow](https://stackoverflow.com/) suggested that re-setting google chrome would resolve the issue, but this did no work.
+* After having re-read the console message, I could see it was due to a favicon.ico so I replaced the default favicon icon with a favicon icon that I wanted to display for my game. This resolved the issue. 
 
 
 
