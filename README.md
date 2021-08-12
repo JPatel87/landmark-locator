@@ -101,9 +101,10 @@ Header and Favicon:
 
 ![end-game](assets/images/readme-images/end-game.png)
 
-
-
-
+* The end game page contains a default statement informing the user that the tour is complete.
+* The users score is shown to them with an an advice comment; these comments differ according to what result bracket you have scored within.
+* Below all of the above text there is a striking emoji that summarises the users performance, which serves as a powerful visual aid appealing to children. 
+* After the user has read and understood how their performance went, they can then make an informed decision about whether to tour again or go back to the home page.
 
 
 
