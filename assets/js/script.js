@@ -1,8 +1,3 @@
-//Check that the DOM is loaded before javascript functions are run
-document.addEventListener("DOMContentLoaded", function (event) {
-    console.log('DOM Content fully loaded');
-});
-
 //Declare variables that are not to be reassigned or redeclared, using const keyword
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
@@ -26,7 +21,7 @@ let timeLeft = 10;
 let timer;
 let endGame;
 
-//Add event listeners to start button, tour again button, home button and choices buttons
+//Add event listeners to start button, tour again button, home button and choice buttons
 document.getElementById('start-tour-btn').addEventListener('click', startGame);
 document.getElementById('tour-again-btn').addEventListener('click', restartGame);
 document.getElementById('home-btn').addEventListener('click', homeDisplay);
@@ -44,9 +39,9 @@ document.getElementById('choice-d').addEventListener('click', function () {
 });
 
 /* The startGame function will start the game once the start tour button is clicked. This function
-closes the instruction container, then  displays the game container. It then calls the setLandmark function to 
-fill the game components. The timer counter is set 10 seconds and the countdown function is called. 
-The current landmark number is also displayed. 
+hides the instruction container and displays the game container. It then calls the setLandmark 
+function to fill the game components. The timer counter is set 10 seconds and the countdown function
+is called. The current landmark number is also displayed. 
 */
 function startGame() {
     instructionContainer.style.display = 'none';
@@ -59,9 +54,8 @@ function startGame() {
 }
 
 /* The setLandmark function will fill the html landmark image and button choices 
-with the current landmark image and answer choices. 
-This function will be called by the startGame function when activated.
-The following website was referred to: https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html
+with the current landmark image and answer choices. This function will be called by the startGame function when activated. 
+The following website was used for guidance: https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html
 */
 function setLandmark() {
     let q = landmarks[currentLandmark];
@@ -83,13 +77,13 @@ function countDown() {
             clearInterval(timer); //If the game gets to the end, stop the countdown, reset the timer
             timeLeft = 10;
         }
-        if (timeLeft <= 0) { //if timer gets to zero the timer will reset to 10 seconds and move on to next question
+        if (timeLeft <= 0) { //if timer gets to 0 and this is not the last landmark, the timer will reset to 10 seconds and move on to next question
             if (!endGame) {
                 timeLeft = 10;
             }
             nextLandmark();
         }
-        timeLeftDisplay.innerHTML = `${timeLeft} seconds`; //display timer countdown to user
+        timeLeftDisplay.innerHTML = `${timeLeft} seconds`; //display timer countdown to user in seconds
         timeLeft -= 1;
     }, 1000);
 }
@@ -111,10 +105,10 @@ choiceColorReset(choiceSelect) function to reset all choice button colours and c
 function buttonColor(choice) {
     const choiceSelect = document.getElementById(choice);
     if (choiceSelect.innerHTML === landmarks[currentLandmark].correct) {
-        choiceSelect.classList.add('correct-choice'); //changes button to green colour 
+        choiceSelect.classList.add('correct-choice'); //changes button to green  
         numberAnswersCorrect++;
     } else {
-        choiceSelect.classList.add('incorrect-choice'); //changes button to red colour
+        choiceSelect.classList.add('incorrect-choice'); //changes button to red 
     }
     disableChoices(); //disable all choices once one is selected
     setTimeout(function () {
@@ -135,7 +129,7 @@ function disableChoices() {
 }
 
 /* The function choiceColorReset(choiceSelect) removes previous choice button 
-colours and disabled classes and resets them, after a choice has been selected
+colours and disabled classes and resets them, after a choice has been selected.
 */
 function choiceColorReset(choiceSelect) {
     choiceSelect.classList.remove('correct-choice');
@@ -166,7 +160,7 @@ function nextLandmark() {
 /* The endGameSummary function is called by the nextQuestion function 
 if there are no more landmarks left to display. This function checks how many answers are correct 
 and displays a summary text and image to reflect the score. 
-The following website was referred to: https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html 
+The following website was used for guidance: https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html 
 */
 function endGameSummary() {
     gameContainer.classList.add('hide');

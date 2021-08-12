@@ -86,6 +86,12 @@ body {
     margin-right: auto; 
 }
 
+#score-container,
+#instruction-container,
+#game-container {
+    min-height: 70vh;
+}
+
 /*Header styles*/
 header {
     display: flex;
@@ -105,22 +111,13 @@ i {
 }
 
 /*Instruction-container style*/
-#instruction-container {
-    min-height: 70vh;
-}
-
 .home-display-img {
     width: 25vw;
 }
 
 /*Game-container styles*/
-#game-container {
-    min-height: 70vh;
-}
-
 #landmark-image {
     width: 80%;
-    height: auto;
     border-radius: 8px;
 }
 
@@ -137,10 +134,6 @@ i {
 }
 
 /*Score-container styles*/
-#score-container {
-    min-height: 70vh;
-}
-
 .score-container-btn {
     display: flex;
     flex-direction: column;
