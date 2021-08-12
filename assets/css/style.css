@@ -50,7 +50,7 @@ body {
     color: #274472;
 }
 
-#start-btn,
+#start-tour-btn,
 #home-btn,
 #tour-again-btn {
     font-size: 1.5rem;
@@ -64,7 +64,7 @@ body {
     padding: 1.5vw;
 }
 
-#start-btn:hover,
+#start-tour-btn:hover,
 #tour-again-btn:hover, 
 #home-btn:hover {
     background-color: #18A558;
@@ -221,7 +221,7 @@ button[disabled] {
         width: 30vw;
     }
 
-    #start-btn,
+    #start-tour-btn,
     #tour-again-btn, 
     #home-btn
     {
@@ -272,7 +272,7 @@ button[disabled] {
         align-content: center;
     }
 
-    #start-btn,
+    #start-tour-btn,
     #tour-again-btn, 
     #home-btn
     {

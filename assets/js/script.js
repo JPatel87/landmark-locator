@@ -1,9 +1,9 @@
 //Check that the DOM is loaded before javascript functions are run
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     console.log('DOM Content fully loaded');
 });
 
-//Constant declarations
+//Declare variables that are not to be reassigned or redeclared, using const keyword
 const instructionContainer = document.getElementById('instruction-container');
 const gameContainer = document.getElementById('game-container');
 const landmarkImg = document.getElementById('landmark-image');
@@ -17,7 +17,7 @@ const finalScore = document.getElementById('final-score');
 const scoreFeedback = document.getElementById('score-feedback');
 const timeLeftDisplay = document.getElementById('time-left');
 
-//Let declarations
+//Declare variables that are subject to re-assignment using let keyword
 let currentLandmark = 0;
 let currentLandmarkActual = 1;
 let maxLandmarks = 20;
@@ -26,24 +26,28 @@ let timeLeft = 10;
 let timer;
 let endGame;
 
-//Event listeners
-document.getElementById('start-btn').addEventListener('click', startGame);
+//Add event listeners to start button, tour again button, home button and choices buttons
+document.getElementById('start-tour-btn').addEventListener('click', startGame);
 document.getElementById('tour-again-btn').addEventListener('click', restartGame);
 document.getElementById('home-btn').addEventListener('click', homeDisplay);
-document.getElementById('choice-a').addEventListener('click', function() {
+document.getElementById('choice-a').addEventListener('click', function () {
     buttonColor('choice-a');
 });
-document.getElementById('choice-b').addEventListener('click', function() {
+document.getElementById('choice-b').addEventListener('click', function () {
     buttonColor('choice-b');
 });
-document.getElementById('choice-c').addEventListener('click', function() {
+document.getElementById('choice-c').addEventListener('click', function () {
     buttonColor('choice-c');
 });
-document.getElementById('choice-d').addEventListener('click', function() {
+document.getElementById('choice-d').addEventListener('click', function () {
     buttonColor('choice-d');
 });
 
-//startGame
+/* The startGame function will start the game once the start tour button is clicked. This function
+closes the instruction container, then  displays the game container. It then calls the setLandmark function to 
+fill the game components. The timer counter is set 10 seconds and the countdown function is called. 
+The current landmark number is also displayed. 
+*/
 function startGame() {
     instructionContainer.style.display = 'none';
     gameContainer.classList.remove('hide');
@@ -54,7 +58,10 @@ function startGame() {
     currentLandmarkDisplay();
 }
 
-//set landmark
+/* The setLandmark function will fill the html landmark image and button choices 
+with the current landmark image and answer choices. 
+This function will be called by the startGame function when activated 
+*/
 function setLandmark() {
     let q = landmarks[currentLandmark];
     landmarkImg.src = q.image;
@@ -65,47 +72,60 @@ function setLandmark() {
     choiceD.innerHTML = q.d;
 }
 
-//countdown
+/* The countDown function will start the countdown running from 10 seconds, 
+after being called by the startGame function. This will countdown the time in 1 second intervals 
+and will decrement by 1. 
+*/
 function countDown() {
-    timer = setInterval(function(){
+    timer = setInterval(function () {
         if (endGame) {
-            clearInterval(timer);
+            clearInterval(timer); //If the game gets to the end, stop the countdown, reset the timer
             timeLeft = 10;
         }
-        if(timeLeft <=0) {
-            if(!endGame) {
+        if (timeLeft <= 0) { //if timer gets to zero the timer will reset to 10 seconds and move on to next question
+            if (!endGame) {
                 timeLeft = 10;
-            } 
+            }
             nextLandmark();
         }
-        timeLeftDisplay.innerHTML = `${timeLeft} seconds`;
-        timeLeft -=1;
+        timeLeftDisplay.innerHTML = `${timeLeft} seconds`; //display timer countdown to user
+        timeLeft -= 1;
     }, 1000);
 }
 
-//set landmark display
+/* The currentLandmarkDisplay function sets the landmark number 
+html to the currentLandmark number out of the max landmark number so users know how many 
+landmarks are left in the game 
+*/
 function currentLandmarkDisplay() {
     landmarkNumber.innerHTML = `Landmark ${currentLandmarkActual} of ${maxLandmarks}`;
 }
 
-//change button color once clicked
+/* The buttonColor(choice) function causes choice buttons to change colour once clicked. 
+It checks for whether the choice text matches the answer for that question.
+If the answer is correct the button will change to green and if it is incorrect 
+it will change to red. The function will then call the 
+choiceColorReset(choiceSelect) function to reset all choice button colours and classes 
+*/
 function buttonColor(choice) {
     const choiceSelect = document.getElementById(choice);
     if (choiceSelect.innerHTML === landmarks[currentLandmark].correct) {
-    choiceSelect.classList.add('correct-choice');
-    numberAnswersCorrect++;
-    console.log(numberAnswersCorrect);
+        choiceSelect.classList.add('correct-choice'); //changes button to green colour 
+        numberAnswersCorrect++;
     } else {
-    choiceSelect.classList.add('incorrect-choice');
+        choiceSelect.classList.add('incorrect-choice'); //changes button to red colour
     }
-    disableChoices();
-    setTimeout(function() {
-        choiceColorReset(choiceSelect) ;
-    }, 500); 
-        timeLeft = 0;   
+    disableChoices(); //disable all choices once one is selected
+    setTimeout(function () {
+        choiceColorReset(choiceSelect);
+    }, 500); //hold colour change for 500ms before resetting so users know if they got it correct or not
+    timeLeft = 0; //once an option is selected the timer will automatically go to 0.
 }
 
-//disable buttons once one button is clicked
+/* The function disableChoices is called once a choice button is selected and it stops 
+any further choice buttons from being selected. 
+All buttons reduce in opacity to provide a visual indication of this 
+*/
 function disableChoices() {
     choiceA.setAttribute("disabled", "disabled");
     choiceB.setAttribute("disabled", "disabled");
@@ -113,7 +133,9 @@ function disableChoices() {
     choiceD.setAttribute("disabled", "disabled");
 }
 
-// remove previous choice button settings once a choice has been selected
+/* The function choiceColorReset(choiceSelect) removes previous choice button 
+colours and disabled classes and resets them, after a choice has been selected
+*/
 function choiceColorReset(choiceSelect) {
     choiceSelect.classList.remove('correct-choice');
     choiceSelect.classList.remove('incorrect-choice');
@@ -123,7 +145,11 @@ function choiceColorReset(choiceSelect) {
     choiceD.removeAttribute("disabled");
 }
 
-//set next landmark
+/* The nextLandmark function is called by the countDown function once its gets to 0 count 
+and if there are still landmarks left in the game. The next question is set if the 
+game has not ended and the current landmark number is incremented by 1. If the game has no further 
+landmarks to display, the game will call the endGameSummary function. 
+*/
 function nextLandmark() {
     currentLandmark++;
     currentLandmarkActual++;
@@ -136,15 +162,18 @@ function nextLandmark() {
     }
 }
 
-//display end game summary
+/* The endGameSummary function is called by the nextQuestion function 
+if there are no more landmarks left to display. This function checks how many answers are correct 
+and displays a summary text and image to reflect the score 
+*/
 function endGameSummary() {
     gameContainer.classList.add('hide');
     scoreContainer.classList.remove('hide');
-    let summaryText = (numberAnswersCorrect <=5) ? 'Nevermind, why not tour again and see if you can do better?':
-                  (numberAnswersCorrect <=9) ? 'Good attempt, there is room for improvement, tour again and lets see if you can do better!':
-                  (numberAnswersCorrect <=15) ? 'Well done! You got at least half of the landmarks correct, only a few errors, tour again?':
-                  (numberAnswersCorrect <=19) ? 'Great effort, almost perfection, tour again and see if you can get them all correct!' : 'Superb effort, your Geography is perfect!';
-                  finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmarks correct`;
+    let summaryText = (numberAnswersCorrect <= 5) ? 'Nevermind, why not tour again and see if you can do better?' :
+        (numberAnswersCorrect <= 9) ? 'Good attempt, there is room for improvement, tour again and lets see if you can do better!' :
+        (numberAnswersCorrect <= 15) ? 'Well done! You got at least half of the landmarks correct, only a few errors, tour again?' :
+        (numberAnswersCorrect <= 19) ? 'Great effort, almost perfection, tour again and see if you can get them all correct!' : 'Superb effort, your Geography is perfect!';
+    finalScore.innerHTML = `You got ${numberAnswersCorrect} out of 20 landmarks correct`;
     scoreFeedback.innerHTML = `${summaryText}`;
     const scoreImage = document.getElementById('score-image');
     switch (summaryText) {
@@ -164,13 +193,16 @@ function endGameSummary() {
             scoreImage.src = 'assets/images/very-high-score.png';
             scoreImage.alt = 'emoji for very high score';
             break;
-        default: 
+        default:
             scoreImage.src = 'assets/images/perfect-score.png';
             scoreImage.alt = 'emoji for perfect score';
     }
 }
 
-//restart game
+/* The restartGame function is called once the tour again button is clicked. 
+It calls the startGame function to activate and the score container to disappear. 
+All previous question counters and scores are reset.
+*/
 function restartGame() {
     scoreContainer.classList.add('hide');
     currentLandmarkActual = 1;
@@ -180,10 +212,14 @@ function restartGame() {
     startGame();
 }
 
-//go to home display
+/* The homeDisplay function is called once the home button is clicked. 
+It causes the instruction container to appear and the score container to disappear 
+and then the user can initiate any further actions
+from the instruction container itself. All previous question counters and scores are reset
+ */
 function homeDisplay() {
     scoreContainer.classList.add('hide');
-    document.getElementById('start-btn').addEventListener('click', startGame);
+    document.getElementById('start-tour-btn').addEventListener('click', startGame);
     instructionContainer.style.display = 'flex';
     currentLandmarkActual = 1;
     currentLandmark = 0;
