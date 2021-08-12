@@ -1,10 +1,23 @@
 # Locate the Landmark
 
-Locate the Landmark is a multiple choice quiz designed to test the geographical knowledge of users. The users of this quiz will be children ages 7+. 
+Locate the Landmark is a multiple choice quiz designed to test the geographical knowledge of users. The users of this quiz will be children of primary school age. 
 
-Users are shown a Landmark around the world from which they have to guess which country the Landmark is located in. Four choices are displayed to the user and they must choose one. Users a given a ten second time frame to choose an answer before the quiz automatically moves on to the next question. 
+Users are invited to go on a world tour through which they are shown landmarks around the world. Their task is to correctly identify and select a landmark's country of origin. Users a given a ten second time frame to choose an answer, before the quiz automatically moves on to the next question. 
 
-The game is designed to be fun through the language that is used to make the user feel that they are going on a world tour and cartoon like figures have also been used on select displays. 
+Below are images of the interactive site displayed on different screens to illustrate its design responsiveness.
+
+Home display:
+
+![home-responsive-display](assets/images/readme-images/home-responsive.png)
+
+Game display:
+
+![game-responsive-display](assets/images/readme-images/game-responsive.png)
+
+End game display
+
+![game-responsive-display](assets/images/readme-images/end-game-responsive.png)
+
 
 # UX
 
