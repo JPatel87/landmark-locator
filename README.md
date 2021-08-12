@@ -95,7 +95,9 @@ Header and Favicon:
 * There is a timer below the landmark question counter to add in a challenge element to the game.
 * The landmark image is sizeable so that the user can clearly see the landmark in order to decipher its location. 
 * The buttons are styled in the same way as the start tour button on the home page to provide uniformity throughout the project.
-* When a choice is correctly selected the button will go green and when a choice is incorrectly selected the button will go red. This provides a quick visual aid to the user about whether they had selected the right answer, without having to use much text. 
+* The user will have to look at the landmark and decide from the button choices which country the landmark is in.
+* When a choice is correctly selected the button will go green and when a choice is incorrectly selected the button will go red. The game will then move to the next question. This provides a quick visual aid to the user about whether they had selected the right answer, without having to use much text.
+* If a user does not select an answer before the timer is up, the display will proceed to the next question and this will be noted as an incorrect answer.  
 
 3. End game page:
 
@@ -113,6 +115,32 @@ If time permitted, I would have liked to:
 * Add a username input function, to further personlise the gaming experience for the user.
 * Add additional levels into the game, for example have hard and easy levels, to enable users to progress onwards.  
 
+# Testing
+
+* The website has been reviewed on various devices such as laptops, ipads and iphones to ensure the media queries are running as expected. No issues reported.
+* The website has been tested by myself, my tutor and my husband to ensure that all the elements that the user will interact with or see are working as they should be, such as: 
+  * favicon icon loads as it should.
+  * images and text are appropriately sized.
+  * buttons able to be pressed and lead
+    onto correct paths.
+  * The correct landmark number is loading
+    when the game proceeds.
+  * The correct answers have been assigned 
+    to each landmark, preventing users from selecting an incorrect as the correct answer.
+  * The correct landmark has been assigned
+    to the answer choices.
+  * pseudo class and curser pointer applies
+    correctly when hovering over buttons
+  * if the user selects the correct answer
+    button, that button will display green momentarily and then the colour will reset for the next question.
+  * if the user selects the incorrect answer
+    button, that button will display green momentarily and then the colour will reset for the next question.
+  * if the user answers the question before
+    the timer is up, the display will move onto the next question and the timer will still reset on the next question.
+  * if the user fails to answer the 
+    question before the timer is up, the display will move onto the next question and the timer will reset.
+  * end game summary statments show the
+    correct number of questions and display the correct advice comment and image. 
 
 
 
