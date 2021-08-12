@@ -97,6 +97,10 @@ Header and Favicon:
 * The buttons are styled in the same way as the start tour button on the home page to provide uniformity throughout the project.
 * When a choice is correctly selected the button will go green and when a choice is incorrectly selected the button will go red. This provides a quick visual aid to the user about whether they had selected the right answer, without having to use much text. 
 
+3. End game page:
+
+![end-game](assets/images/readme-images/end-game.png)
+
 
 
 
