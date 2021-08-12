@@ -60,7 +60,8 @@ function startGame() {
 
 /* The setLandmark function will fill the html landmark image and button choices 
 with the current landmark image and answer choices. 
-This function will be called by the startGame function when activated 
+This function will be called by the startGame function when activated.
+The following website was referred to: https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html
 */
 function setLandmark() {
     let q = landmarks[currentLandmark];
@@ -164,7 +165,8 @@ function nextLandmark() {
 
 /* The endGameSummary function is called by the nextQuestion function 
 if there are no more landmarks left to display. This function checks how many answers are correct 
-and displays a summary text and image to reflect the score 
+and displays a summary text and image to reflect the score. 
+The following website was referred to: https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html 
 */
 function endGameSummary() {
     gameContainer.classList.add('hide');

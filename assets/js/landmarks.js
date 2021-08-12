@@ -1,5 +1,8 @@
-let landmarks = [
-    {
+/*Declaration of landmarks and their corresponding answer choices as well as the correct answer.
+The following website was referred to: 
+https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html
+*/
+let landmarks = [{
         image: "assets/images/india.jpeg",
         alt: "Taj Mahal",
         a: "India",
