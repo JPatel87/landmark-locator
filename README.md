@@ -151,6 +151,42 @@ If time permitted, I would have liked to:
 * I searched for answers on the internet however nothing worked. Messages that i came across on [Stack Overflow](https://stackoverflow.com/) suggested that re-setting google chrome would resolve the issue, but this did no work.
 * After having re-read the console message, I could see it was due to a favicon.ico so I replaced the default favicon icon with a favicon icon that I wanted to display for my game. This resolved the issue. 
 
+Console error:
+![console-error](assets/images/readme-images/console-error.png)
+
+Console error resolved:
+![console-error-resolved](assets/images/readme-images/console-resolve.png)
+
+2. Instruction container hide error
+* I wanted to add a hide class to my instruction container once the startGame function was rendered, however the style although creating no errors in the console, it was not being applied to the container and hence not disappearing when the startGame function was activated.
+* After speaking to my tutor, it seemed as though the hide class was being overidden by the flex display that was being applied, she suggested to add the css styling to hide a button rather than assigning it a hide class. This resolved the issue.
+
+3. Unused variables detected by JShint.
+
+* After having almost completed my project, I wanted to check my javascript file in JSHint. 
+* An error that JSHint displayed was for 'Unused variables'. These variables had event listeners attached to them. 
+* For example, the startGame variable was declared using the keyword ‘const’ at the beginning of the javascript file. It was later called in a function, by making a reference to the variable name only for examples as follows; ‘start;’. 
+* It was realised by the project owner that due to the reason that the keyword ‘Const’ has block scope, this would possibly be the reason why it was displaying as an error in JSHint. However, it was unusual to find that this was not detected by the console in developer tools. 
+* The project owner removed the keyword from all unused variable names and left them just with just the event listener attached to them. All these variables were placed in a separate section in js. The issue was resolved.
+
+4. Undefined variable detected by JShint 
+
+* This was another issue that was detected by JShint towards the end of the project.
+* The undefined variable was being declared in a separate javascript file.
+* The project owner overlooked the fact that JSHint was not able to know this and it was pointed out by a Tutor at [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=486298911546&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMIorzct4er8gIVGeDtCh2T8QThEAAYASAAEgLlWvD_BwE).
+* Thereafter, the code from the separate javascript file was also copied into JSHint, above the main javacript file. The issue was no longer present.
+
+Undefined variable - issue:
+
+![undefined-variable-issue](assets/images/readme-images/undefined-variable-error.png)
+
+Undefined variable - issue resolved:
+
+![undefined-variable-resolved](assets/images/readme-images/undefined-variable-resolved.png)
+
+
+
+
 
 
 
