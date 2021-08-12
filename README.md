@@ -184,6 +184,78 @@ Undefined variable - issue resolved:
 
 ![undefined-variable-resolved](assets/images/readme-images/undefined-variable-resolved.png)
 
+## Validator Testing
+
+* The index.html files was checked on the official W3C Validator - no errors were found.
+
+![html-w3c-validator](assets/images/readme-images/html-w3c-validator.png)
+
+* The style.css files was checked on the official (Jigsaw) Validator - no errors found.
+
+![css-jigsaw-validator](assets/images/readme-images/css-jigsaw-validator.png)
+
+* The landmarks.js and the script.js files were checked on the official Jshint validator, metrics as follows:
+  * 17 functions in this site.
+  * Function with the largest signature take 1 arguments, while the 
+    median is 0.
+  * Largest function has 9 statements in it, while the median is 6.
+  * The most complex function has a cyclomatic complexity value of 9 while the median is 1.
+  * 28 warnings about the use of variable keywords.
+
+![js-jshint-validator](assets/images/readme-images/js-jshint-validator.png)
+
+* The performance of the website was also checked using Lighthouse on Chrome Developer tools, the result is as below:
+
+![lighthouse-performance](assets/images/readme-images/lighthouse-performance.png)
+
+## Unfixed bugs
+
+There are no bugs that I have not tried to rectify in javascript.One issue that I would have liked to rectify is to make the landmark images all one size, because at the moment the sizes vary which causes the container box to increase and decrease accordingly, which does not make for a good user experience.
+
+# Deployment
+
+1. Ensure most recent code is pushed to Github from Gitpod workspace.
+2. Login to Github.
+3. Open up your project repository.
+4. Click on the 'Settings' option.
+5. Scroll down to 'Github pages'.
+6. Under 'Source' click into first box (displayed as 'none') and select a
+   branch called 'Main'.
+7. Click 'Save' where you be taken back to the 'Settings' page.
+8. Scroll down to 'Github pages', where it prompts you to check out 
+   "Pages settings' - click this prompt.
+9. A message will be displayed, within a green container, at the top of
+   the page informing you the address where the site has been published.
+
+The live link to this project can be found at:
+
+https://jpatel87.github.io/locate-the-landmark/
+
+# Credits 
+
+The project forms part of the Code Institute Full Stack Developer course. I would like to give recognition to the Code Institute Tutor team who have been fantastic at answering any queries at any time of the day. My sincere thanks to my tutor, Owonikoko Oluwaseun, who has been brilliant at trying to help me with my code. My thanks also to my husband for his guidance and support.
+
+## Content 
+
+* The ideas for the landmarks in my project were found on the following websites [designlike](https://designlike.com/100-most-famous-landmarks-around-the-world/#:~:text=%20100%20Most%20Famous%20Landmarks%20Around%20the%20World,India%2012%20Machu%20Picchu%20in%20Peru%20More%20) and [listChallenges](https://www.listchallenges.com/150-most-famous-landmarks-in-the-world)
+* To help with my javascript quiz, I took guidance from the following websites: [SimpleStepsCode](https://simplestepscode.com/javascript-quiz-tutorial/#:~:text=%20How%20to%20make%20a%20simple%20JavaScript%20quiz,own%20JavaScript%20quiz.%20You%20have%20the...%20More%20) and [Codeexplained.org](https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html)
+
+## Media 
+
+* Photos used for the landmarks were taken from [Pexels.com](https://www.pexels.com/)
+* The emoji images and the home screen cartoon image were taken from [Pixabay.com](https://pixabay.com/)
+* [Font awesome](https://fontawesome.com/) was used to select a logo and then use that as an favicon.
+* [Googlefonts](https://fonts.google.com/) was used to select the font for the project.
+
+
+
+
+
+
+
+
+
+
 
 
 
