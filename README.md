@@ -85,7 +85,7 @@ Header and Favicon:
 
 * The home page has a happy, cartoon, world character which is attractive for children and it also carries through the theme of this project. 
 * Another aim of the cartoon character is to appear as though they are delivering the instructions of the game, which helps make the instructions easy to digest and less formal.
-*  The button used to initiate the game has purposefully been named "Start tour" in order to keep the theme running through the project. It is designed to be bigger than the rest of the paragraph text to highlight its importance. When the button is hovered over, it turns green and the mouse pointer turns to a curser, this is to add some fun element to the button. 
+*  The button used to initiate the game has purposefully been named "Start tour" in order to keep the theme running through the project. It is designed to be bigger than the rest of the paragraph text to highlight its importance. When the button is hovered over, it turns green and the mouse pointer turns to a curser, this is to add some fun element to the button. The mouse curser style has been added to every button on this project.
 
 2. Game page:
 
@@ -104,16 +104,14 @@ Header and Favicon:
 * The end game page contains a default statement informing the user that the tour is complete.
 * The users score is shown to them with an an advice comment; these comments differ according to what result bracket you have scored within.
 * Below all of the above text there is a striking emoji that summarises the users performance, which serves as a powerful visual aid appealing to children. 
-* After the user has read and understood how their performance went, they can then make an informed decision about whether to tour again or go back to the home page.
+* After the user has read and understood how their performance went, they can then make an informed decision about whether to tour again or go back to the home page. 
+* Both tour again and home options are  buttons which have a hover pseudo class changing the background colour to green when hovered over (same as with the start tour button on the home page).
 
-
-
-4. Buttons 
-* All buttons have been designed so that they are big and eyecatching.
-* For consistency they have all been styled with the same colour background.
-* To give some fun effect to the buttons, a hover effect has been added to the 'Start tour', 'Tour again' and 'Home' buttons so that they change colour when you hover over them. 
-* An additional feature of the buttons is that the mouse pointer changes to a curser when you pass over the buttons which further highlights the intent of the buttons. 
-
+## Features Left to Implement
+If time permitted, I would have liked to:
+* Add a link to the home page from the header i class to make it easier for the user to come out of the game at any point (if this is possible)
+* Add a username input function, to further personlise the gaming experience for the user.
+* Add additional levels into the game, for example have hard and easy levels, to enable users to progress onwards.  
 
 
 
